@@ -1,6 +1,7 @@
 import { Container } from "react-bootstrap";
 import "./css/globals.css";
 import Layout from "./pages/Layout";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
