@@ -1,15 +1,13 @@
 import React from "react";
-import { Carousel, Container } from "react-bootstrap";
+import { Carousel, Container, Navbar } from "react-bootstrap";
 import Footer from "./Footer";
 import Header from "./Header";
-import Navbar from "./Navbar";
 
 const Main = () => {
   return (
     <>
       <Navbar />
       <Container fluid className="d-flex flex-column min-vh-100 px-0">
-        <Navbar />
         <Header />
         <div>
           <Carousel>
