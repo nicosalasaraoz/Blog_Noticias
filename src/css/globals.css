@@ -1,1 +1,12 @@
 @import url("/src/css-reset/reset.css");
+
+
+/*footer*/
+
+.icono{
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+    border-radius: 40px;
+    border: 1px solid #e5e5ec;
+}
