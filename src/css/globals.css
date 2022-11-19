@@ -23,10 +23,15 @@ beige:E6CBA8;
 winter:FDF0E0;
 /*footer*/
 
-.icono {
+.bg-footer{
+background-color: rgb(69, 68, 68);
+}
+
+.icono-footer {
   height: 40px;
   width: 40px;
   font-size: 20px;
+  color: #edf0fc;
   border-radius: 40px;
-  border: 1px solid #e5e5ec;
+  border: 2px solid #1f1fe6;
 }
