@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="container">
           <nav className="row">
             <Link to='/' className="col-12 col-md-3 d-flex aling-items-center justify-content-center">
-              <img src="../images/logo.png" className="mx-2 my-4" height="60" alt="logo"/>
+              <img src="../images/logo.png" className="mx-2 my-4 m-4" height="70" alt="logo"/>
             </Link> 
             <ul className="col-12 col-md-3 list-unstyled">
               <li className="mb-2"><Link to='/error' className="fw-bold text-white" style={{textDecoration:"none"}}>Últimas noticias</Link></li>
