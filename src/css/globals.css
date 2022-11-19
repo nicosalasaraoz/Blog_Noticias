@@ -1,5 +1,19 @@
 @import url("/src/css-reset/reset.css");
 
+.icono-fav {
+  color: rgba(238, 212, 61, 0.711);
+  font-size: 25px;
+  border-color: black;
+}
+
+.icono-busqueda {
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+}
+
+.icono-login {
+  font-size: 25px;
+}
 
 /* Paleta de colores
 
@@ -9,10 +23,10 @@ beige:E6CBA8;
 winter:FDF0E0;
 /*footer*/
 
-.icono{
-    height: 40px;
-    width: 40px;
-    font-size: 20px;
-    border-radius: 40px;
-    border: 1px solid #e5e5ec;
+.icono {
+  height: 40px;
+  width: 40px;
+  font-size: 20px;
+  border-radius: 40px;
+  border: 1px solid #e5e5ec;
 }
