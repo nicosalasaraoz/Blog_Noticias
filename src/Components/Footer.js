@@ -39,7 +39,7 @@ const Footer = () => {
           </nav>
         </div>
       </footer>
-      <div className="text-center bg-footer ">
+      <div className="text-center bg-footer">
           <p className="text-white mb-0 ">&copy; BlogNews. Comision 9i-Grupo3. 2022</p>
         </div>
     </div>
