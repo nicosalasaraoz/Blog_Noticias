@@ -1,10 +1,11 @@
 import React from "react";
-import {Link} from 'react-router-dom';
-import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+import { Link } from "react-router-dom";
+// import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
     <>
+    
     <div className="mt-auto ">
       <footer className=" bg-footer py-4 text-white pb-0">
         <div className="container">
