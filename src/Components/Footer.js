@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -33,15 +33,15 @@ const Footer = () => {
                 <Link to='/error' className="icono-footer text-center">
                 <FaInstagram /></Link>
                 </li>
-                <li className="mt-3 fw-bold text-center ">
-                <Link to='/contacto'className="text-white" style={{textDecoration:"none"}}>Contáctenos</Link>
+                <li className="mt-3 text-center">
+                <Link to='/contacto'className="text-white fw-bold" style={{textDecoration:"none"}}>Contáctenos</Link>
                 </li>
             </ul>
           </nav>
         </div>
       </footer>
       <div className="text-center bg-footer">
-          <p className="text-white mb-0 ">&copy; BlogNews. Comision 9i-Grupo3. 2022</p>
+          <p className="text-white mb-0">&copy; BlogNews. Comision 9i-Grupo3. 2022</p>
         </div>
     </div>
     </>
