@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -33,7 +33,7 @@ const Footer = () => {
                 <Link to='/error' className="icono-footer text-center">
                 <FaInstagram /></Link>
                 </li>
-                <li className="mt-3 fw-bold text-center ">
+                <li className="mt-3 fw-bold text-center">
                 <Link to='/contacto'className="text-white" style={{textDecoration:"none"}}>Contáctenos</Link>
                 </li>
             </ul>
