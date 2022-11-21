@@ -13,7 +13,7 @@ const ModalLogin = ({ show, handleClose }) => {
       </Modal.Header>
       <Container>
         <Form>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Group className="mb-3" controlId="formBasicEmail1">
             <Form.Label>Ingresa tu email</Form.Label>
             <Form.Control type="email" placeholder="rollingFan@gmail.com" />
             <Form.Text className="text-muted">
@@ -35,10 +35,10 @@ const ModalLogin = ({ show, handleClose }) => {
       </Container>
       <Modal.Footer>
         <Button variant="secondary" onClick={handleClose}>
-          Close
+          Cerrar
         </Button>
         <Button variant="primary" onClick={handleClose}>
-          Save Changes
+          Guardar cambios
         </Button>
       </Modal.Footer>
     </Modal>
