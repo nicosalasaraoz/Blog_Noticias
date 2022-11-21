@@ -1,12 +1,13 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import Image from 'react-bootstrap/Image'
+import { Container, Button } from 'react-bootstrap';
 
 
 const Error404 = () => {
   return (
-    <Container fluid>
-        <img src ="" className='' height='auto' alt='error404'/>
-        <button/>
+    <Container fluid className=''>
+      <Image fluid src='../images/error.jpg' className='' alt='error404'></Image>
+        <Button className='btn'/>
     </Container>
   )
 }
