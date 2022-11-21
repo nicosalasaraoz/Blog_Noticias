@@ -23,17 +23,16 @@ beige:E6CBA8;
 winter:FDF0E0;
 /*footer*/
 
-.bg-footer{
-background-color: rgb(69, 68, 68);
+.bg-footer {
+  background-color: rgb(69, 68, 68);
 }
 
-  @media only screen and (max-width:768px)
-  {
-    .oculto{
-      visibility: hidden;
-      display: none;
-    }
+@media only screen and (max-width: 768px) {
+  .oculto {
+    visibility: hidden;
+    display: none;
   }
+}
 .icono-footer {
   height: 40px;
   width: 40px;
@@ -43,4 +42,10 @@ background-color: rgb(69, 68, 68);
   border: 2px solid #1f1fe6;
 }
 
-
+.icono-header {
+  height: 40px;
+  width: 40px;
+  font-size: 20px;
+  color: #1f1fe6;
+  border-radius: 40px;
+}
