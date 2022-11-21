@@ -1,1 +1,76 @@
 @import url("/src/css-reset/reset.css");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+body{
+  font-family: 'Roboto Slab', serif;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.icono-fav {
+  color: gold;
+  font-size: 25px;
+  border-color: black;
+}
+
+.icono-busqueda {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+}
+
+.icono-login {
+  font-size: 25px;
+}
+
+.icono-call {
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+}
+
+.icono-home {
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+}
+
+@media only screen and (min-width: 768px) {
+  .ocultar-buscador {
+    visibility: hidden;
+    display: none;
+  }
+}
+
+/* Paleta de colores
+
+navy: 0008C1;
+blue: 2146C7;
+beige:E6CBA8;
+winter:FDF0E0;
+
+/*footer*/
+
+.bg-footer {
+  background-color: rgb(69, 68, 68);
+}
+
+@media only screen and (max-width: 768px) {
+  .oculto {
+    visibility: hidden;
+    display: none;
+  }
+}
+.icono-footer {
+  height: 40px;
+  width: 40px;
+  font-size: 20px;
+  color: #edf0fc;
+  border-radius: 40px;
+  border: 2px solid #1f1fe6;
+}
+
+.icono-header {
+  height: 40px;
+  width: 40px;
+  font-size: 20px;
+  color: #1f1fe6;
+  border-radius: 40px;
+}

@@ -4,6 +4,7 @@ import Articles from "./Articles";
 import Footer from "./Footer";
 import Header from "./Header";
 import NavbarMain from "./NavbarMain";
+import Error404 from "./Error404";
 
 const Main = () => {
   return (
@@ -14,6 +15,10 @@ const Main = () => {
         <Articles/>
         <Footer />
       </Container>
+      <NavbarMain />
+      <Header />
+      <Footer />
+      <Error404 />
     </>
   );
 };
