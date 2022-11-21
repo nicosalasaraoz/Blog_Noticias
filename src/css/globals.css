@@ -1,4 +1,11 @@
 @import url("/src/css-reset/reset.css");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+body{
+  font-family: 'Roboto Slab', serif;
+  min-height: 100vh;
+  margin: 0;
+}
 
 .icono-fav {
   color: rgba(238, 212, 61, 0.711);
@@ -21,6 +28,7 @@ navy: 0008C1;
 blue: 2146C7;
 beige:E6CBA8;
 winter:FDF0E0;
+
 /*footer*/
 
 .bg-footer {
