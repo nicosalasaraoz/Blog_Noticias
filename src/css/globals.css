@@ -1,18 +1,35 @@
 @import url("/src/css-reset/reset.css");
 
 .icono-fav {
-  color: rgba(238, 212, 61, 0.711);
+  color: gold;
   font-size: 25px;
   border-color: black;
 }
 
 .icono-busqueda {
   color: rgb(255, 255, 255);
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .icono-login {
   font-size: 25px;
+}
+
+.icono-call {
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+}
+
+.icono-home {
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+}
+
+@media only screen and (min-width: 768px) {
+  .ocultar-buscador {
+    visibility: hidden;
+    display: none;
+  }
 }
 
 /* Paleta de colores

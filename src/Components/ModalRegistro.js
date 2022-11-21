@@ -13,20 +13,17 @@ const ModalRegistro = ({ registro, handleCerrar }) => {
       </Modal.Header>
       <Container>
         <Form>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Group className="mb-3" controlId="formBasicEmail2">
             <Form.Label>Ingresa tu Nombre y Apellido</Form.Label>
             <Form.Control type="email" placeholder="Roberto Sanchez" />
             <Form.Text className="text-muted">
-              We'll never share your email with anyone else.
+              Escribe tu nombre completo.
             </Form.Text>
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Ingresa tu email</Form.Label>
             <Form.Control type="email" placeholder="rollingFan@gmail.com" />
-            <Form.Text className="text-muted">
-              We'll never share your email with anyone else.
-            </Form.Text>
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -35,9 +32,6 @@ const ModalRegistro = ({ registro, handleCerrar }) => {
               type="password"
               placeholder="Nunca compartas tu contraseña"
             />
-            <Form.Text className="text-muted">
-              We'll never share your email with anyone else.
-            </Form.Text>
           </Form.Group>
         </Form>
       </Container>
