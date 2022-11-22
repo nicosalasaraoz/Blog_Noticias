@@ -13,11 +13,7 @@ import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 const Header = () => {
   return (
     <>
-      <Navbar
-        bg="light"
-        expand="lg"
-        className="d-flex justify-content-around z-index-0"
-      >
+      <Navbar bg="light" expand="lg" className="d-flex justify-content-start">
         <Container>
           <Navbar.Brand href="#home">
             <img
@@ -28,20 +24,18 @@ const Header = () => {
             />
           </Navbar.Brand>
           <Nav>
-            <ul className="d-fluid justify-content-around">
-              <li className="d-flex justify-content-center">
-                <Link to="/error" className="icono-header text-center">
-                  <FaFacebookF />
-                </Link>
-                <Link to="/error" className="icono-header text-center">
-                  <FaTwitter />
-                </Link>
-                <Link to="/error" className="icono-header text-center">
-                  <FaInstagram />
-                </Link>
-              </li>
-            </ul>
-            <div class="d-flex justify-content-center ocultar-buscador oculto">
+            <div className="d-flex justify-content-center">
+              <Link to="/error" className="icono-header text-center">
+                <FaFacebookF />
+              </Link>
+              <Link to="/error" className="icono-header text-center">
+                <FaTwitter />
+              </Link>
+              <Link to="/error" className="icono-header text-center">
+                <FaInstagram />
+              </Link>
+            </div>
+            <div class="d-flex justify-content-end ocultar-busqueda">
               <Form className="d-flex">
                 <Form.Control
                   type="search"
@@ -62,11 +56,11 @@ const Header = () => {
           </Nav>
         </Container>
       </Navbar>
-      <div>
+      <div className=" container d-flex w-100 h-50">
         <Carousel>
           <Carousel.Item interval={1000}>
             <img
-              className="d-block w-100"
+              className="d-block w-100 h-50"
               src="../images/Montaña.jpg"
               alt="First slide"
             />
@@ -77,7 +71,7 @@ const Header = () => {
           </Carousel.Item>
           <Carousel.Item interval={500}>
             <img
-              className="d-block w-100"
+              className="d-block w-100 h-50"
               src="../images/Montaña.jpg"
               alt="Second slide"
             />
@@ -88,7 +82,7 @@ const Header = () => {
           </Carousel.Item>
           <Carousel.Item>
             <img
-              className="d-block w-100"
+              className="d-block w-100 h-50"
               src="../images/Montaña.jpg"
               alt="Third slide"
             />
