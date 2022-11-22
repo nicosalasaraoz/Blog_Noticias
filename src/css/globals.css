@@ -1,8 +1,8 @@
 @import url("/src/css-reset/reset.css");
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
 
-body{
-  font-family: 'Roboto Slab', serif;
+body {
+  font-family: "Roboto Slab", serif;
   min-height: 100vh;
   margin: 0;
 }
@@ -72,5 +72,11 @@ winter:FDF0E0;
   width: 40px;
   font-size: 20px;
   color: #1f1fe6;
-  border-radius: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .ocultar-busqueda {
+    display: none;
+    visibility: hidden;
+  }
 }
