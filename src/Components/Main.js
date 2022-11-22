@@ -5,9 +5,10 @@ import Footer from "./Footer";
 import Header from "./Header";
 import NavbarMain from "./NavbarMain";
 import Error404 from "./Error404";
+
+import { Route, Routes } from "react-router-dom";
 import PaginaAdminFeatured from "./PaginaAdminFeatured";
 import PaginaAdminUser from "./PaginaAdminUser";
-
 const Main = () => {
   return (
     <>
@@ -20,9 +21,15 @@ const Main = () => {
       <NavbarMain />
       <Header />
       <Footer />
+
+      <Routes>
+      <Route path="/error404" element={<Error404/>} />
+      </Routes>
+
       <Error404 />
       <PaginaAdminFeatured />
       <PaginaAdminUser />
+
     </>
   );
 };

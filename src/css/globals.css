@@ -1,10 +1,6 @@
 @import url("/src/css-reset/reset.css");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
 
-body {
-  font-family: "Roboto Slab", serif;
-  min-height: 100vh;
-  margin: 0;
 }
 
 .icono-fav {
@@ -79,4 +75,16 @@ winter:FDF0E0;
     display: none;
     visibility: hidden;
   }
+}
+
+/*error 404 */
+
+.bt-volver{
+position: absolute;
+z-index: 30;
+top: 50%;
+}
+
+.image-e{
+  z-index: 5;
 }

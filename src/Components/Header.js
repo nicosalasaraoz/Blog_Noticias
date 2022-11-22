@@ -24,18 +24,21 @@ const Header = () => {
             />
           </Navbar.Brand>
           <Nav>
-            <div className="d-flex justify-content-center">
-              <Link to="/error" className="icono-header text-center">
-                <FaFacebookF />
-              </Link>
-              <Link to="/error" className="icono-header text-center">
-                <FaTwitter />
-              </Link>
-              <Link to="/error" className="icono-header text-center">
-                <FaInstagram />
-              </Link>
-            </div>
-            <div class="d-flex justify-content-end ocultar-busqueda">
+            <ul className="d-fluid justify-content-around">
+              <li className="d-flex justify-content-center">
+                <Link to="/error404" className="icono-header text-center">
+                  <FaFacebookF />
+                </Link>
+                <Link to="/error404" className="icono-header text-center">
+                  <FaTwitter />
+                </Link>
+                <Link to="/error404" className="icono-header text-center">
+                  <FaInstagram />
+                </Link>
+              </li>
+            </ul>
+            <div class="d-flex justify-content-center">
+
               <Form className="d-flex">
                 <Form.Control
                   type="search"
