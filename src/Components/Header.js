@@ -30,13 +30,13 @@ const Header = () => {
           <Nav>
             <ul className="d-fluid justify-content-around">
               <li className="d-flex justify-content-center">
-                <Link to="/error" className="icono-header text-center">
+                <Link to="/error404" className="icono-header text-center">
                   <FaFacebookF />
                 </Link>
-                <Link to="/error" className="icono-header text-center">
+                <Link to="/error404" className="icono-header text-center">
                   <FaTwitter />
                 </Link>
-                <Link to="/error" className="icono-header text-center">
+                <Link to="/error404" className="icono-header text-center">
                   <FaInstagram />
                 </Link>
               </li>

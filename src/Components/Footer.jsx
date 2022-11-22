@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+import Error404 from "./Error404";
 
 const Footer = () => {
   return (
@@ -23,7 +24,7 @@ const Footer = () => {
               <ul className="col-12 col-md-4 col-lg-3 list-unstyled text-center oculto">
                 <li className="mb-2">
                   <Link
-                    to="/error"
+                    to="/error404"
                     className="fw-bold text-white"
                     style={{ textDecoration: "none" }}
                   >
@@ -32,7 +33,7 @@ const Footer = () => {
                 </li>
                 <li className="mb-2">
                   <Link
-                    to="/error"
+                    to="/error404"
                     className="fw-bold text-white"
                     style={{ textDecoration: "none" }}
                   >
@@ -41,7 +42,7 @@ const Footer = () => {
                 </li>
                 <li className="mb-2">
                   <Link
-                    to="/error"
+                    to="/error404"
                     className="fw-bold text-white"
                     style={{ textDecoration: "none" }}
                   >
@@ -52,7 +53,7 @@ const Footer = () => {
               <ul className="col-12 col-md-4 col-lg-3 list-unstyled text-center oculto">
                 <li className="mb-2">
                   <Link
-                    to="/error"
+                    to="/error404"
                     className="fw-bold text-white"
                     style={{ textDecoration: "none" }}
                   >
@@ -61,7 +62,7 @@ const Footer = () => {
                 </li>
                 <li className="mb-2">
                   <Link
-                    to="/error"
+                    to="/error404"
                     className="fw-bold text-white"
                     style={{ textDecoration: "none" }}
                   >
@@ -70,7 +71,7 @@ const Footer = () => {
                 </li>
                 <li className="mb-2">
                   <Link
-                    to="/error"
+                    to="/error404"
                     className="fw-bold text-white"
                     style={{ textDecoration: "none" }}
                   >
@@ -81,13 +82,13 @@ const Footer = () => {
               <ul className="col-12 col-md-12 col-lg-3 list-unstyled">
                 <li className="mb-2 fw-bold"></li>
                 <li className="d-flex justify-content-evenly">
-                  <Link to="/error" className="icono-footer text-center">
+                  <Link to="/error404" className="icono-footer text-center">
                     <FaFacebookF />
                   </Link>
-                  <Link to="/error" className="icono-footer text-center">
+                  <Link to="/error404" className="icono-footer text-center">
                     <FaTwitter />
                   </Link>
-                  <Link to="/error" className="icono-footer text-center">
+                  <Link to="/error404" className="icono-footer text-center">
                     <FaInstagram />
                   </Link>
                 </li>

@@ -3,8 +3,7 @@
 
 body{
   font-family: 'Roboto Slab', serif;
-  min-height: 100vh;
-  margin: 0;
+  
 }
 
 .icono-fav {
@@ -56,4 +55,16 @@ winter:FDF0E0;
   font-size: 20px;
   color: #1f1fe6;
   border-radius: 40px;
+}
+
+/*error 404 */
+
+.bt-volver{
+position: absolute;
+z-index: 30;
+top: 50%;
+}
+
+.image-e{
+  z-index: 5;
 }
