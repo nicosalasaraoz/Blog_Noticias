@@ -1,8 +1,6 @@
 @import url("/src/css-reset/reset.css");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
 
-}
-
 .icono-fav {
   color: gold;
   font-size: 25px;
@@ -79,12 +77,12 @@ winter:FDF0E0;
 
 /*error 404 */
 
-.bt-volver{
-position: absolute;
-z-index: 30;
-top: 50%;
+.bt-volver {
+  position: absolute;
+  z-index: 30;
+  top: 50%;
 }
 
-.image-e{
+.image-e {
   z-index: 5;
 }
