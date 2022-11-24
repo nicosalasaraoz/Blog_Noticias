@@ -1,7 +1,6 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 
-
 // import Articles from "./Articles";
 
 import Footer from "./Footer";
@@ -16,33 +15,16 @@ const Main = () => {
   return (
     <>
       <Container fluid className="d-flex flex-column min-vh-100 px-0">
-        
         <NavbarMain />
         <Header />
-
         <Footer />
-        
-      <PaginaAdminFeatured />
-      <PaginaAdminUser />
-      <Routes>
-          <Route path="/error404" element={<Error404/>} />
+        <PaginaAdminFeatured />
+        <PaginaAdminUser />
+        <Routes>
+          <Route path="/error404" element={<Error404 />} />
         </Routes>
       </Container>
-        {/* <Articles/> */}
-        <Footer />
-      </Container>
-      <NavbarMain />
-      <Header />
-      <Footer />
-
-      <Routes>
-        <Route path="/error404" element={<Error404 />} />
-      </Routes>
-
-      <Error404 />
-      <PaginaAdminFeatured />
-      <PaginaAdminUser />
-
+      {/* <Articles/> */}
     </>
   );
 };
