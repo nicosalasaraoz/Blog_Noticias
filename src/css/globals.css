@@ -1,7 +1,7 @@
 @import url("/src/css-reset/reset.css");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
 
-}
+
 
 .icono-fav {
   color: gold;
@@ -81,10 +81,25 @@ winter:FDF0E0;
 
 .bt-volver{
 position: absolute;
-z-index: 30;
-top: 50%;
+top: 80%;
+left: 50vw;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+
+text-align: center;
+cursor: pointer;
+
 }
 
 .image-e{
-  z-index: 5;
+  background-image: url(/public/images/error.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;   
+  width: 100%; 
+  position: relative;
+  margin: auto;
+  
 }
