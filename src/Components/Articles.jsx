@@ -1,31 +1,30 @@
-import { Container } from 'react-bootstrap';
-import { Card} from 'react-bootstrap';
-// import { Link } from 'react-router-dom';
+// import { Container } from 'react-bootstrap';
+// import { Card} from 'react-bootstrap';
+// // import { Link } from 'react-router-dom';
 
-const Articles = ({ a }) => {
-              return (
-                <Container>       
-            <Card className="p-0">
-            <Card.Img
-                variant="top"
-                src={a.url}
-                className="p-3"
-            />
-            <Card.Body>
-                <Card.Title>{a.title}</Card.Title>
-            </Card.Body>
-            {/* <Card.Footer>${a.price}</Card.Footer>
-            <Card.Footer>
-                <Link to={`/product/${a.id}`}>
-                <Button>Ir al producto</Button>
-                </Link>
-            </Card.Footer> */}
-            </Card>
-                 </Container>
-            );
-        }
-export default Articles;
-
+// const Articles = ({ a }) => {
+//               return (
+//                 <Container>
+//             <Card className="p-0">
+//             <Card.Img
+//                 variant="top"
+//                 src={a.url}
+//                 className="p-3"
+//             />
+//             <Card.Body>
+//                 <Card.Title>{a.title}</Card.Title>
+//             </Card.Body>
+//             {/* <Card.Footer>${a.price}</Card.Footer>
+//             <Card.Footer>
+//                 <Link to={`/product/${a.id}`}>
+//                 <Button>Ir al producto</Button>
+//                 </Link>
+//             </Card.Footer> */}
+//             </Card>
+//                  </Container>
+//             );
+//         }
+// export default Articles;
 
 // import Card from 'react-bootstrap/Card';
 // import CardGroup from 'react-bootstrap/CardGroup';
@@ -34,7 +33,7 @@ export default Articles;
 
 // function GroupExample() {
 //   return (
-//      <Container Row xs={2} md={4} lg={3} className="g-4" mt={3}>        
+//      <Container Row xs={2} md={4} lg={3} className="g-4" mt={3}>
 //     <CardGroup>
 //       <Card>
 //         <Card.Img variant="top" src="https://d3us6z9haan6vf.cloudfront.net/11-19-2022/t_37e47f27155743fba1e2502375a7f545_name_file_1280x720_2000_v3_1_.jpg" />
@@ -103,7 +102,7 @@ export default Articles;
 //       </Card>
 //     </CardGroup>
 //     </Container>
-    
+
 //   );
 // }
 

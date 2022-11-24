@@ -3,6 +3,8 @@
 
 
 
+
+
 .icono-fav {
   color: gold;
   font-size: 25px;
@@ -24,6 +26,11 @@
 }
 
 .icono-home {
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+}
+
+.icono-destacados {
   color: rgb(255, 255, 255);
   font-size: 25px;
 }
@@ -103,3 +110,7 @@ cursor: pointer;
   margin: auto;
   
 }
+
+
+}
+

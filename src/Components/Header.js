@@ -38,7 +38,6 @@ const Header = () => {
               </li>
             </ul>
             <div class="d-flex justify-content-center">
-
               <Form className="d-flex">
                 <Form.Control
                   type="search"
@@ -59,7 +58,7 @@ const Header = () => {
           </Nav>
         </Container>
       </Navbar>
-      <div className=" container d-flex w-100 h-50">
+      <Container className="fluid h-50">
         <Carousel>
           <Carousel.Item interval={1000}>
             <img
@@ -97,7 +96,7 @@ const Header = () => {
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
-      </div>
+      </Container>
     </>
   );
 };

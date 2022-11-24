@@ -1,5 +1,9 @@
 import React from "react";
 import { Container } from "react-bootstrap";
+
+
+// import Articles from "./Articles";
+
 import Footer from "./Footer";
 import Header from "./Header";
 import NavbarMain from "./NavbarMain";
@@ -15,6 +19,7 @@ const Main = () => {
         
         <NavbarMain />
         <Header />
+
         <Footer />
         
       <PaginaAdminFeatured />
@@ -23,6 +28,21 @@ const Main = () => {
           <Route path="/error404" element={<Error404/>} />
         </Routes>
       </Container>
+        {/* <Articles/> */}
+        <Footer />
+      </Container>
+      <NavbarMain />
+      <Header />
+      <Footer />
+
+      <Routes>
+        <Route path="/error404" element={<Error404 />} />
+      </Routes>
+
+      <Error404 />
+      <PaginaAdminFeatured />
+      <PaginaAdminUser />
+
     </>
   );
 };
