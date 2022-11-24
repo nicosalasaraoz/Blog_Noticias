@@ -16,12 +16,45 @@ const ModalRegistro = ({ registro, handleCerrar }) => {
           initialValues={{ user: "", email: "", pass: "", repeatPass: "" }}
           validate={(values) => {
             const errors = {};
+            if (!values.user) {
+              errors.user = "El campo esta vacio, completalo!";
+            } else if (
+              !/^([A-Za-zÑñÁáÉéÍíÓóÚú]+['\]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+)(\s+([A-Za-zÑñÁáÉéÍíÓóÚú]+['\]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+))*$/i.test(
+                values.user
+              )
+            ) {
+              errors.user =
+                "Nombre incorrecto, solo puede contener letras y sin espacio al final";
+            }
+
             if (!values.email) {
-              errors.email = "El campo esta vacio!";
+              errors.email = "El campo esta vacio, completalo!";
             } else if (
               !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
             ) {
               errors.email = "Email incorrecto!";
+            }
+
+            if (!values.pass) {
+              errors.pass = "El campo esta vacio, completalo!";
+            } else if (
+              /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,15}[^'\s]/i.test(
+                values.pass
+              )
+            ) {
+              errors.pass =
+                "Tu contraseña debe tener al menos una Mayuscula, una Minuscula y un Numero!";
+            }
+
+            if (!values.repeatPass) {
+              errors.repeatPass = "El campo esta vacio, completalo!";
+            } else if (
+              /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,15}[^'\s]/i.test(
+                values.repeatPass
+              )
+            ) {
+              errors.pass =
+                "Tu contraseña debe tener al menos una Mayuscula, una Minuscula y un Numero!";
             }
             return errors;
           }}
@@ -46,32 +79,64 @@ const ModalRegistro = ({ registro, handleCerrar }) => {
                 <Field
                   name="user"
                   values={values.user}
-                  className={"form-control"}
+                  className={`form-control ${
+                    errors.user && touched.user && "is-invalid"
+                  }`}
                 />
+                <div style={{ color: "red" }} className="mt-1">
+                  {errors.user && touched.user && errors.user}
+                </div>
+                <br />
                 <label className="my-2">
                   <b>Tu Correo electronico</b>
                 </label>
                 <Field
                   name="email"
                   values={values.email}
-                  className={"form-control"}
+                  className={`form-control ${
+                    errors.email && touched.email && "is-invalid"
+                  }`}
                 />
+                <div style={{ color: "red" }} className="mt-1">
+                  {errors.email && touched.email && errors.email}
+                </div>
+                <br />
                 <label className="my-2">
                   <b>Contraseña</b>
+                  <p className="mt-1">
+                    <small>
+                      Debe contener una letra Mayuscula, una Minuscula, un
+                      numero y un caracter especial. Ejemplo: Rollingnews27#
+                    </small>
+                  </p>
                 </label>
                 <Field
+                  type="password"
                   name="pass"
                   values={values.pass}
-                  className={"form-control"}
+                  className={`form-control ${
+                    errors.pass && touched.pass && "is-invalid"
+                  }`}
                 />
+                <div style={{ color: "red" }} className="mt-1">
+                  {errors.pass && touched.pass && errors.pass}
+                </div>
+                <br />
                 <label className="my-2">
                   <b>Repite tu contraseña</b>
                 </label>
                 <Field
+                  type="password"
                   name="repeatPass"
                   values={values.repeatPass}
-                  className={"form-control"}
+                  className={`form-control ${
+                    errors.repeatPass && touched.repeatPass && "is-invalid"
+                  }`}
                 />
+                <div style={{ color: "red" }} className="mt-1">
+                  {errors.repeatPass && touched.repeatPass && errors.repeatPass}
+                </div>
+                <br />
                 <div className="d-flex justify-content-center">
                   <input
                     type={"submit"}

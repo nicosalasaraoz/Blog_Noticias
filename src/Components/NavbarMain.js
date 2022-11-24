@@ -100,7 +100,7 @@ const NavbarMain = () => {
         </Container>
       </Navbar>
       <ModalLogin show={show} handleClose={handleClose} />
-      <ModalRegistro registro={registro} handleClose={handleCerrar} />
+      <ModalRegistro registro={registro} handleCerrar={handleCerrar} />
     </>
   );
 };
