@@ -26,18 +26,20 @@ const NavbarMain = () => {
             id="basic-navbar-nav"
           >
             <Nav>
-              <Nav.Link className="text-dark mb-1" href="#pricing">
+              <Nav.Link className="text-dark mb-1 mx-2" href="#pricing">
                 <div className="icono-call">
                   <ion-icon name="call"></ion-icon>
                 </div>
               </Nav.Link>
-              <Nav.Link className="text-dark mb-1" href="#home">
+              <Nav.Link className="text-dark mb-1 mx-2" href="#home">
                 <div className="icono-home">
                   <ion-icon name="home"></ion-icon>
                 </div>
               </Nav.Link>
-              <Nav.Link className="text-dark mt-1" href="#features">
-                <b className="text-white">Destacados</b>
+              <Nav.Link className="text-dark mb-1 mx-2" href="#features">
+                <div className="icono-destacados">
+                  <ion-icon name="heart"></ion-icon>
+                </div>
               </Nav.Link>
             </Nav>
             <Nav>
