@@ -9,12 +9,16 @@ import {
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+import Desplegable from "./Desplegable";
+
 
 const Header = () => {
+
   return (
     <>
       <Navbar bg="light" expand="lg" className="d-flex justify-content-start">
         <Container>
+          <Desplegable />
           <Navbar.Brand href="#home">
             <img
               src="./images/logo.png"
