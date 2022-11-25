@@ -27,19 +27,6 @@ const Main = () => {
         </Routes>
       </Container>
         {/* <Articles/> */}
-        <Footer />
-      </Container>
-      <NavbarMain />
-      <Header />
-      <Footer />
-
-      <Routes>
-        <Route path="/error404" element={<Error404 />} />
-      </Routes>
-
-      <Error404 />
-      <PaginaAdminFeatured />
-      <PaginaAdminUser />
 
     </>
   );
