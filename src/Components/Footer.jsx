@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 
-
 const Footer = () => {
   return (
     <>
@@ -16,7 +15,7 @@ const Footer = () => {
               >
                 <img
                   src="../images/logo.png"
-                  className="mx-2 my-4 m-4"
+                  className="centrar-logo mx-2 my-4 m-4"
                   height="70"
                   alt="logo"
                 />

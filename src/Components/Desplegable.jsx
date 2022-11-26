@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import { FaBars } from 'react-icons/fa';
 
 const Desplegable = () => {
     const [show, setShow] = useState(false);
@@ -11,7 +12,7 @@ const Desplegable = () => {
   return (
     <>
     <Button variant="primary" onClick={handleShow}>
-    Launch
+    <FaBars/>
   </Button>
 
   <Offcanvas show={show} onHide={handleClose}>

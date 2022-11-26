@@ -15,16 +15,13 @@ const NavbarMain = () => {
   const handleMostrar = () => setRegistro(true);
   return (
     <>
-      <Navbar bg="dark" expand="lg">
+      <Navbar bg="dark" expand="lg" className="bg-navbar">
         <Container>
           <Navbar.Toggle
             aria-controls="basic-navbar-nav"
             className="bg-light"
           />
-          <Navbar.Collapse
-            className="d-flex justify-content-between"
-            id="basic-navbar-nav"
-          >
+          <Navbar.Collapse id="basic-navbar-nav">
             <Nav>
               <Nav.Link className="text-dark mb-1 mx-2" href="#pricing">
                 <div className="icono-call">
@@ -42,10 +39,29 @@ const NavbarMain = () => {
                 </div>
               </Nav.Link>
             </Nav>
+            <Container>
+              <Form className="d-flex justify-content-center no-wrap ocultar-buscador">
+                <Form.Control
+                  type="search"
+                  placeholder="Buscar..."
+                  className="me-2 mb-2"
+                  aria-label="Search"
+                  size="sm"
+                />
+                <Button className="mb-2" size="sm">
+                  <div className="icono-busqueda">
+                    <ion-icon
+                      className="icono-busqueda"
+                      name="search-outline"
+                    ></ion-icon>
+                  </div>
+                </Button>
+              </Form>
+            </Container>
             <Nav>
               <Button
                 variant="outline-secondary"
-                className="d-flex align-items-center mx-1 mb-2"
+                className="d-flex align-items-center justify-content-center mx-1 mb-2"
                 size="sm"
               >
                 <div className="icono-fav">
@@ -57,7 +73,7 @@ const NavbarMain = () => {
               </Button>
               <Button
                 variant="danger"
-                className="d-flex align-items-center mx-1 mb-2"
+                className="d-flex align-items-center justify-content-center mx-1 mb-2"
                 onClick={handleShow}
               >
                 <div className="icono-login">
@@ -78,25 +94,6 @@ const NavbarMain = () => {
               </Button>
             </Nav>
           </Navbar.Collapse>
-          <Container className="ocultar-buscador">
-            <Form className="d-flex justify-content-center no-wrap ocultar-buscador">
-              <Form.Control
-                type="search"
-                placeholder="Buscar..."
-                className="me-2"
-                aria-label="Search"
-                size="sm"
-              />
-              <Button size="sm">
-                <div className="icono-busqueda">
-                  <ion-icon
-                    className="icono-busqueda"
-                    name="search-outline"
-                  ></ion-icon>
-                </div>
-              </Button>
-            </Form>
-          </Container>
         </Container>
       </Navbar>
       <ModalLogin show={show} handleClose={handleClose} />
