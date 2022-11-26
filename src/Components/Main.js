@@ -8,7 +8,6 @@ import Error404 from "./Error404";
 import { Route, Routes } from "react-router-dom";
 import PaginaAdminFeatured from "./PaginaAdminFeatured";
 import PaginaAdminUser from "./PaginaAdminUser";
-import PaginaContacto from "./PaginaContacto";
 
 const Main = () => {
   return (
@@ -25,11 +24,9 @@ const Main = () => {
       <Routes>
           <Route path="/error404" element={<Error404/>} />
         </Routes>
-
         {/* <Articles/> */}
-        <PaginaContacto />
-      </Container>
-
+    </Container>
+    
   );
 };
 
