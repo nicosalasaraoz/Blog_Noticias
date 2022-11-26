@@ -101,6 +101,15 @@ const Header = () => {
           </Carousel.Item>
         </Carousel>
       </Container>
+      <Link to="/Error404">
+        <Button
+          variant="outline-secondary"
+          className="d-flex align-items-center mx-1 mb-2"
+          size="sm"
+        >
+          mandarme al error404
+        </Button>
+      </Link>
     </>
   );
 };
