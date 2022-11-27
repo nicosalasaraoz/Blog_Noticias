@@ -7,10 +7,10 @@ const ArticleList = () => {
     const News = [{
 id: "01",
 name: "Sports Catar",
-title: "La ceremonia inaugural del Mundial Qatar 2022, en vivo",
+title: "Arrancó el Mundial y con una ceremonia impactante se levantó el telón de Qatar 2022",
 description: "La apertura de la Copa del Mundo en el estadio Al Bayt de Doha, bajo la conducción de Morgan Freeman, incluyó un show de Jung Kook y la participación del Gauchito de Argentina 1978; una hora después comenzó el primer partido, Qatar-Ecuador",
-url: "https://d3us6z9haan6vf.cloudfront.net/11-19-2022/t_37e47f27155743fba1e2502375a7f545_name_file_1280x720_2000_v3_1_.jpg",
-content: "Gustavo Alfaro se transformó en el primer director técnico argentino en ganar en un debut mundialista. Algo que no pudieron César Menotti ni Carlos Bilardo. “Esto está más allá de cualquier racha, de cualquier cosa”, dijo el DT de Ecuador después de que el plantel que dirige se impusiera 2-0 ante el local Qatar. No obstante, quiso mostrar cautela para lo que queda en la Copa del Mundo. “Esto no alcanza, esto recién empieza”, aseguró para la transmisión oficial de la FIFA, con el partido ya terminado."},
+url: "https://www.lanacion.com.ar/resizer/wSY2UNvjCwpT0tOO_9RDb-gPf9U=/1200x800/smart/filters:format(webp):quality(80)/cloudfront-us-east-1.images.arcpublishing.com/lanacionar/CEDJTZX2IZGEDO72SIY34VZCRI.JPG",
+content: "El sol cayó suavemente sobre el horizonte de arena. El viento cálido que sopló todo el día desde el desierto fue el marco ideal para la apertura del Mundial Qatar 2022 en el estadio Al Bayt de Doha, que combinó tradición y sobriedad, y que resultó un espectáculo impactante. LA NACION llegó a la sede mundialista más alejada del centro de la capital qatarí luego de recorrer cerca de 30 kilómetros a través del desierto. En la línea roja del metro, el último tramo corre pegado a una impecable autopista de cinco carriles por mano. A los costados solo se ven arena y piedras, y cuesta creer que adentro del estadio Al Bayt -que se asemeja a una carpa beduina- se erija la primera sede mundialista de Medio Oriente."},
 {id: "02",
 name: "Sports Catar",
 title: "Mundial Qatar 2022: las diez razones por las que en este país se jugará la Copa más atípica de la historia",
@@ -38,10 +38,10 @@ content: "HARM EL SHEIJ.- Desde el inicio de la conferencia del clima de la ONU 
 {
 id: "06",
 name: "Sports Catar",
-title: "La ceremonia inaugural del Mundial Qatar 2022, en vivo",
+title: "Arrancó el Mundial y con una ceremonia impactante se levantó el telón de Qatar 2022",
 description: "La apertura de la Copa del Mundo en el estadio Al Bayt de Doha, bajo la conducción de Morgan Freeman, incluyó un show de Jung Kook y la participación del Gauchito de Argentina 1978; una hora después comenzó el primer partido, Qatar-Ecuador",
-url: "https://d3us6z9haan6vf.cloudfront.net/11-19-2022/t_37e47f27155743fba1e2502375a7f545_name_file_1280x720_2000_v3_1_.jpg",
-content: "Gustavo Alfaro se transformó en el primer director técnico argentino en ganar en un debut mundialista. Algo que no pudieron César Menotti ni Carlos Bilardo. “Esto está más allá de cualquier racha, de cualquier cosa”, dijo el DT de Ecuador después de que el plantel que dirige se impusiera 2-0 ante el local Qatar. No obstante, quiso mostrar cautela para lo que queda en la Copa del Mundo. “Esto no alcanza, esto recién empieza”, aseguró para la transmisión oficial de la FIFA, con el partido ya terminado."},
+url: "https://www.lanacion.com.ar/resizer/wSY2UNvjCwpT0tOO_9RDb-gPf9U=/1200x800/smart/filters:format(webp):quality(80)/cloudfront-us-east-1.images.arcpublishing.com/lanacionar/CEDJTZX2IZGEDO72SIY34VZCRI.JPG",
+content: "El sol cayó suavemente sobre el horizonte de arena. El viento cálido que sopló todo el día desde el desierto fue el marco ideal para la apertura del Mundial Qatar 2022 en el estadio Al Bayt de Doha, que combinó tradición y sobriedad, y que resultó un espectáculo impactante. LA NACION llegó a la sede mundialista más alejada del centro de la capital qatarí luego de recorrer cerca de 30 kilómetros a través del desierto. En la línea roja del metro, el último tramo corre pegado a una impecable autopista de cinco carriles por mano. A los costados solo se ven arena y piedras, y cuesta creer que adentro del estadio Al Bayt -que se asemeja a una carpa beduina- se erija la primera sede mundialista de Medio Oriente."},
 {id: "07",
 name: "Sports Catar",
 title: "Mundial Qatar 2022: las diez razones por las que en este país se jugará la Copa más atípica de la historia",
@@ -69,10 +69,10 @@ content: "HARM EL SHEIJ.- Desde el inicio de la conferencia del clima de la ONU 
 {
 id: "11",
 name: "Sports Catar",
-title: "La ceremonia inaugural del Mundial Qatar 2022, en vivo",
+title: "Arrancó el Mundial y con una ceremonia impactante se levantó el telón de Qatar 2022",
 description: "La apertura de la Copa del Mundo en el estadio Al Bayt de Doha, bajo la conducción de Morgan Freeman, incluyó un show de Jung Kook y la participación del Gauchito de Argentina 1978; una hora después comenzó el primer partido, Qatar-Ecuador",
-url: "https://d3us6z9haan6vf.cloudfront.net/11-19-2022/t_37e47f27155743fba1e2502375a7f545_name_file_1280x720_2000_v3_1_.jpg",
-content: "Gustavo Alfaro se transformó en el primer director técnico argentino en ganar en un debut mundialista. Algo que no pudieron César Menotti ni Carlos Bilardo. “Esto está más allá de cualquier racha, de cualquier cosa”, dijo el DT de Ecuador después de que el plantel que dirige se impusiera 2-0 ante el local Qatar. No obstante, quiso mostrar cautela para lo que queda en la Copa del Mundo. “Esto no alcanza, esto recién empieza”, aseguró para la transmisión oficial de la FIFA, con el partido ya terminado."},
+url: "https://www.lanacion.com.ar/resizer/wSY2UNvjCwpT0tOO_9RDb-gPf9U=/1200x800/smart/filters:format(webp):quality(80)/cloudfront-us-east-1.images.arcpublishing.com/lanacionar/CEDJTZX2IZGEDO72SIY34VZCRI.JPG",
+content: "El sol cayó suavemente sobre el horizonte de arena. El viento cálido que sopló todo el día desde el desierto fue el marco ideal para la apertura del Mundial Qatar 2022 en el estadio Al Bayt de Doha, que combinó tradición y sobriedad, y que resultó un espectáculo impactante. LA NACION llegó a la sede mundialista más alejada del centro de la capital qatarí luego de recorrer cerca de 30 kilómetros a través del desierto. En la línea roja del metro, el último tramo corre pegado a una impecable autopista de cinco carriles por mano. A los costados solo se ven arena y piedras, y cuesta creer que adentro del estadio Al Bayt -que se asemeja a una carpa beduina- se erija la primera sede mundialista de Medio Oriente."},
 {id: "12",
 name: "Sports Catar",
 title: "Mundial Qatar 2022: las diez razones por las que en este país se jugará la Copa más atípica de la historia",
@@ -101,7 +101,7 @@ content: "HARM EL SHEIJ.- Desde el inicio de la conferencia del clima de la ONU 
   return (
     <Container>
       <CardGroup>
-      <Row xs={2} md={4} lg={5} className="my-4">
+      <Row xs={2} md={4} lg={5} className="my-2">
         {News.map((a, i) => (
           <Articles a={a} key={'Articles' + i} />
         ))}
