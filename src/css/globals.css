@@ -128,3 +128,10 @@ winter:FDF0E0;
   position: relative;
   margin: auto;
 }
+
+/*Desplegable*/
+
+.desp{
+  font-size: 25px;
+  border: 0;
+}
