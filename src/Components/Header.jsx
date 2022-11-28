@@ -11,9 +11,7 @@ import { Link } from "react-router-dom";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 import Desplegable from "./Desplegable";
 
-
 const Header = () => {
-
   return (
     <>
       <Navbar bg="light" expand="lg" className="d-flex justify-content-start">
@@ -101,15 +99,6 @@ const Header = () => {
           </Carousel.Item>
         </Carousel>
       </Container>
-      <Link to="/Error404">
-        <Button
-          variant="outline-secondary"
-          className="d-flex align-items-center mx-1 mb-2"
-          size="sm"
-        >
-          mandarme al error404
-        </Button>
-      </Link>
     </>
   );
 };

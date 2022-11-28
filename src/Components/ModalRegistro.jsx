@@ -6,7 +6,7 @@ import Modal from "react-bootstrap/Modal";
 const ModalRegistro = ({ registro, handleCerrar }) => {
   return (
     <Modal show={registro} onHide={handleCerrar}>
-      <Modal.Header closeButton className="bg-primary">
+      <Modal.Header closeButton className="bg-navbar">
         <Modal.Title>
           <b style={{ color: "white" }}>Únete a Nosotros!</b>
         </Modal.Title>
