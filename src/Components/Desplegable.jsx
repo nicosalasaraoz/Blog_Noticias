@@ -17,8 +17,8 @@ const Desplegable = () => {
     <FaAlignJustify/>
   </Button>
 
-  <Offcanvas show={show} onHide={handleClose}>
-    <Offcanvas.Header closeButton>
+  <Offcanvas className="canv" show={show} onHide={handleClose} >
+    <Offcanvas.Header closeButton className="canva-t" >
       <Offcanvas.Title>
       <Link to="/">
       <img
@@ -30,18 +30,18 @@ const Desplegable = () => {
       </Link>
       </Offcanvas.Title>
     </Offcanvas.Header>
-    <Offcanvas.Body className="">
+    <Offcanvas.Body className="canv-b">
     <Nav defaultActiveKey="/home" className="flex-column">
-      <Nav.Link href="/home">Home</Nav.Link>
-      <Nav.Link eventKey="link-1">Economía</Nav.Link>
-      <Nav.Link eventKey="link-2">Sociedad</Nav.Link>
+      <Nav.Link href="/">Home</Nav.Link>
+      <Nav.Link eventKey="link-1">Último Momento</Nav.Link>
+      <hr></hr>
+      <Nav.Link eventKey="link-2">Economía</Nav.Link>
       <Nav.Link eventKey="link-3">Deportes</Nav.Link>
       <Nav.Link eventKey="link-4">Mundo</Nav.Link>
       <Nav.Link eventKey="link-5">Espectáculos</Nav.Link>
       <Nav.Link eventKey="link-6">Política</Nav.Link>
-      <Nav.Link eventKey="disabled" disabled>
-        Disabled
-      </Nav.Link>
+      <Nav.Link eventKey="link-7">Opinión</Nav.Link>
+      <Nav.Link eventKey="link-9" className='fw-bold fs-6'>Contenido Exclusivo</Nav.Link>
     </Nav>
     </Offcanvas.Body>
   </Offcanvas>
