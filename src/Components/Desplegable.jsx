@@ -14,7 +14,7 @@ const Desplegable = () => {
   return (
     <>
     <Button  variant="outline-secondary"  className="desp"  onClick={handleShow}>
-    <FaAlignJustify/>
+    <FaAlignJustify className='icon-desp'/> Secciones
   </Button>
 
   <Offcanvas className="canv" show={show} onHide={handleClose} >
