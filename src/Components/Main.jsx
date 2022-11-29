@@ -23,7 +23,7 @@ const Main = () => {
       <PaginaAdminFeatured />
       <PaginaAdminUser />
       <Routes>
-          <Route path="/error404" element={<Error404/>} />
+          <Route path="error404" element={<Error404/>} />
         </Routes>
 
         <ArticleList/>
