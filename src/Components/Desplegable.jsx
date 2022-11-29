@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import { FaAlignJustify } from 'react-icons/fa';
+import { FaAlignJustify, FaSort } from 'react-icons/fa';
 import { Link } from "react-router-dom";
 import  Nav  from "react-bootstrap/Nav";
 
@@ -14,7 +14,7 @@ const Desplegable = () => {
   return (
     <>
     <Button  variant="outline-secondary"  className="desp"  onClick={handleShow}>
-    <FaAlignJustify/>
+    <FaAlignJustify className='icon-desp'/> Secciones
   </Button>
 
   <Offcanvas className="canv" show={show} onHide={handleClose} >
@@ -35,13 +35,16 @@ const Desplegable = () => {
       <Nav.Link href="/">Home</Nav.Link>
       <Nav.Link eventKey="link-1">Último Momento</Nav.Link>
       <hr></hr>
-      <Nav.Link eventKey="link-2">Economía</Nav.Link>
+      <Button className='bt-sort'><FaSort claasName="bt-sort"/></Button>
+      <div>
+      <Nav.Link eventKey="">Economía</Nav.Link>
       <Nav.Link eventKey="link-3">Deportes</Nav.Link>
       <Nav.Link eventKey="link-4">Mundo</Nav.Link>
       <Nav.Link eventKey="link-5">Espectáculos</Nav.Link>
       <Nav.Link eventKey="link-6">Política</Nav.Link>
       <Nav.Link eventKey="link-7">Opinión</Nav.Link>
       <Nav.Link eventKey="link-9" className='fw-bold fs-6'>Contenido Exclusivo</Nav.Link>
+      </div>
     </Nav>
     </Offcanvas.Body>
   </Offcanvas>
