@@ -143,10 +143,7 @@ winter:FDF0E0;
   width: 300px !important;
 }
 .bt-sort{
-  display: flex;
-  justify-content: flex-end;
-  font-size: 25px;
-
+  font-size: 20px;
 }
 
 
