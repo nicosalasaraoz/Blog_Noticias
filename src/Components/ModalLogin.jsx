@@ -6,7 +6,7 @@ import Modal from "react-bootstrap/Modal";
 const ModalLogin = ({ show, handleClose }) => {
   return (
     <Modal show={show} onHide={handleClose}>
-      <Modal.Header closeButton className="bg-primary">
+      <Modal.Header closeButton className="bg-navbar">
         <Modal.Title>
           <b style={{ color: "white" }}>Bienvenido!</b>
         </Modal.Title>
@@ -80,6 +80,9 @@ const ModalLogin = ({ show, handleClose }) => {
                 <div style={{ color: "red" }} className="mt-1">
                   {errors.pass && touched.pass && errors.pass}
                 </div>
+                <p className="text-center mt-4">
+                  Olvidaste tu contraseña? Click aquí.
+                </p>
                 <br />
                 <div className="d-flex justify-content-center">
                   <input
