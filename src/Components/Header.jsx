@@ -63,7 +63,7 @@ const Header = () => {
             </div>
           </Navbar>
         </div>
-      </Container>
+    </Container>
       <Container>
         <div className="fluid h-50">
           <Carousel>

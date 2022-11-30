@@ -23,7 +23,7 @@ const Desplegable = () => {
   </Button>
 
   <Offcanvas className="canv" show={show} onHide={handleClose} >
-    <Offcanvas.Header closeButton className="canva-t" >
+    <Offcanvas.Header closeButton >
       <Offcanvas.Title>
       <Link to="/">
       <img

@@ -18,10 +18,11 @@ const Main = () => {
 
       <Routes>
         <Route path="/error404" element={<Error404 />} />
+        <Route path="/paginacontacto" element={<PaginaContacto />} />
       </Routes>
 
       <ArticleList />
-      <PaginaContacto />
+      
     </Container>
   );
 };
