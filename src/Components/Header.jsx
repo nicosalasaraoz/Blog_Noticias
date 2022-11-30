@@ -14,8 +14,9 @@ import Desplegable from "./Desplegable";
 const Header = () => {
   return (
     <>
-      <Navbar bg="light" expand="lg" className="d-flex justify-content-start">
-        <Container>
+    <Container  className="d-flex justify-content-around">
+        <div className="container-fluid ">
+        <Navbar bg="light"  className="">
           <Desplegable />
           <Navbar.Brand href="#home">
             <img
@@ -26,8 +27,24 @@ const Header = () => {
             />
           </Navbar.Brand>
           <Nav>
-            <ul className="d-fluid justify-content-around">
-              <li className="d-flex justify-content-center">
+          <div className="ocultar-busqueda">
+              <Form className="d-flex">
+                <Form.Control
+                  type="search"
+                  placeholder="Buscar..."
+                  className="me-2"
+                  aria-label="Search"
+                />
+              <Button>
+                  <div className="icono-busqueda">
+                    <ion-icon
+                      className="icono-busqueda"
+                      name="search-outline"
+                    ></ion-icon>
+                  </div>
+                </Button>
+            <ul>
+              <li className="">
                 <Link to="/error404" className="icono-header text-center">
                   <FaFacebookF />
                 </Link>
@@ -39,28 +56,14 @@ const Header = () => {
                 </Link>
               </li>
             </ul>
-            <div class="d-flex justify-content-center">
-              <Form className="d-flex">
-                <Form.Control
-                  type="search"
-                  placeholder="Buscar..."
-                  className="me-2"
-                  aria-label="Search"
-                />
-                <Button>
-                  <div className="icono-busqueda">
-                    <ion-icon
-                      className="icono-busqueda"
-                      name="search-outline"
-                    ></ion-icon>
-                  </div>
-                </Button>
               </Form>
             </div>
           </Nav>
+          </Navbar>
+        </div>
         </Container>
-      </Navbar>
-      <Container className="fluid h-50">
+<Container>
+      <div className="fluid h-50">
         <Carousel>
           <Carousel.Item interval={1000}>
             <img
@@ -98,6 +101,7 @@ const Header = () => {
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
+      </div>
       </Container>
     </>
   );
