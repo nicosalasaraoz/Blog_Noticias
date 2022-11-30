@@ -41,7 +41,7 @@
   font-size: 25px;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
   .ocultar-buscador {
     visibility: hidden;
     display: none;
@@ -75,7 +75,7 @@ winter:FDF0E0;
   background-color: rgb(69, 68, 68);
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
   .oculto {
     visibility: hidden;
     display: none;

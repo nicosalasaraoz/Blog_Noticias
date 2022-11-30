@@ -11,10 +11,13 @@ const Desplegable = () => {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+
+
   return (
     <>
     <Button  variant="outline-secondary"  className="desp"  onClick={handleShow}>
-    <FaAlignJustify className='icon-desp'/> Secciones
+    <FaAlignJustify className='icon-desp'/> 
   </Button>
 
   <Offcanvas className="canv" show={show} onHide={handleClose} >

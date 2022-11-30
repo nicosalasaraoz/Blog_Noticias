@@ -14,7 +14,7 @@ import Desplegable from "./Desplegable";
 const Header = () => {
   return (
     <>
-      <Container className="d-flex justify-content-around">
+      <Container className="d-flex justify-content-evenly">
         <div className="container-fluid ">
           <Navbar bg="light" className="">
             <Desplegable />
@@ -22,26 +22,27 @@ const Header = () => {
               <img
                 src="./images/logo.png"
                 alt="logo"
-                height="80"
-                className="pt-3 ms-2"
+                height="60"
+                className=""
               />
             </Navbar.Brand>
-            <Nav>
-              <ul className="d-fluid justify-content-around">
-                <li className="d-flex justify-content-center">
-                  <Link to="/error404" className="icono-header text-center">
+            <div className="">
+              <nav>
+              <ul>
+                <li>
+                  <Link to="/error404" className="icono-header text-center m-2">
                     <FaFacebookF />
                   </Link>
-                  <Link to="/error404" className="icono-header text-center">
+                  <Link to="/error404" className="icono-header text-center m-2">
                     <FaTwitter />
                   </Link>
-                  <Link to="/error404" className="icono-header text-center">
+                  <Link to="/error404" className="icono-header text-center m-2">
                     <FaInstagram />
                   </Link>
                 </li>
               </ul>
-              <div class="d-flex justify-content-center">
-                <Form className="d-flex">
+                <small>
+                <Form>
                   <Form.Control
                     type="search"
                     placeholder="Buscar..."
@@ -56,22 +57,10 @@ const Header = () => {
                       ></ion-icon>
                     </div>
                   </Button>
-                  <ul>
-                    <li className="">
-                      <Link to="/error404" className="icono-header text-center">
-                        <FaFacebookF />
-                      </Link>
-                      <Link to="/error404" className="icono-header text-center">
-                        <FaTwitter />
-                      </Link>
-                      <Link to="/error404" className="icono-header text-center">
-                        <FaInstagram />
-                      </Link>
-                    </li>
-                  </ul>
                 </Form>
-              </div>
-            </Nav>
+                </small>
+                </nav>
+            </div>
           </Navbar>
         </div>
       </Container>
