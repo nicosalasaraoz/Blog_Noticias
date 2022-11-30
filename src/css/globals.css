@@ -75,7 +75,7 @@ winter:FDF0E0;
   background-color: rgb(69, 68, 68);
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
   .oculto {
     visibility: hidden;
     display: none;
@@ -131,19 +131,18 @@ winter:FDF0E0;
 
 /*Desplegable*/
 
-.desp{
+.desp {
   font-size: 25px;
   border: 0;
 }
 
-.canv{
+.canv {
   width: 300px !important;
-  
 }
 
-.canv-b{
-
+.canv-b {
 }
 
-
-
+.slider-size {
+  height: 50% !important;
+}

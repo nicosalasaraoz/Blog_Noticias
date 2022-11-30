@@ -11,9 +11,7 @@ import { Link } from "react-router-dom";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 import Desplegable from "./Desplegable";
 
-
 const Header = () => {
-
   return (
     <>
       <Navbar bg="light" expand="lg" className="d-flex justify-content-start">
@@ -28,7 +26,7 @@ const Header = () => {
             />
           </Navbar.Brand>
           <Nav>
-            <ul className="d-fluid justify-content-around">
+            <ul className="d-fluid justify-content-around pt-3">
               <li className="d-flex justify-content-center">
                 <Link to="/error404" className="icono-header text-center">
                   <FaFacebookF />
@@ -66,37 +64,38 @@ const Header = () => {
         <Carousel>
           <Carousel.Item interval={1000}>
             <img
-              className="d-block w-100 h-50"
-              src="../images/Montaña.jpg"
-              alt="First slide"
+              className="d-block w-100 slider-size"
+              src="../images/covid.jpg"
+              alt=""
             />
             <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <h3>Los casos de covid-19 aumentaron un 50% en Tucumán</h3>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item interval={500}>
             <img
               className="d-block w-100 h-50"
-              src="../images/Montaña.jpg"
-              alt="Second slide"
+              src="../images/enfermeria.jpg"
+              alt=""
             />
             <Carousel.Caption>
-              <h3>Second slide label</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <h3>
+                Enfermería: exigen que se acelere el pase de escuela a facultad
+                y temen que se trunque el proyecto
+              </h3>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
             <img
               className="d-block w-100 h-50"
-              src="../images/Montaña.jpg"
-              alt="Third slide"
+              src="../images/soja.jpg"
+              alt=""
             />
             <Carousel.Caption>
-              <h3>Third slide label</h3>
-              <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-              </p>
+              <h3>
+                El Banco Central compró U$S192 millones tras la puesta en marcha
+                del dólar soja
+              </h3>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
