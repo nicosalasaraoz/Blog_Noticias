@@ -6,30 +6,23 @@ import Header from "./Header";
 import NavbarMain from "./NavbarMain";
 import Error404 from "./Error404";
 import { Route, Routes } from "react-router-dom";
-import PaginaAdminFeatured from "./PaginaAdminFeatured";
-import PaginaAdminUser from "./PaginaAdminUser";
 import PaginaContacto from "./PaginaContacto";
 
 const Main = () => {
   return (
-    
-      <Container fluid className="d-flex flex-column min-vh-100 px-0">
-        
-        <NavbarMain />
-        <Header />
+    <Container fluid className="d-flex flex-column min-vh-100 px-0">
+      <NavbarMain />
+      <Header />
 
-        <Footer />
-        
-      <PaginaAdminFeatured />
-      <PaginaAdminUser />
+      <Footer />
+
       <Routes>
-          <Route path="error404" element={<Error404/>} />
-        </Routes>
+        <Route path="/error404" element={<Error404 />} />
+      </Routes>
 
-        <ArticleList/>
-        <PaginaContacto />
-      </Container>
-
+      <ArticleList />
+      <PaginaContacto />
+    </Container>
   );
 };
 

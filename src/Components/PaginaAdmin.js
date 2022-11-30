@@ -1,16 +1,17 @@
 import React from "react";
+import { Container } from "react-bootstrap";
 import Table from "react-bootstrap/Table";
 
 function UserTable() {
   return (
-    <div className="container">
+    <Container>
       <Table striped bordered hover>
         <thead>
           <tr>
             <th>#</th>
             <th>First Name</th>
             <th>Last Name</th>
-            <th>Email Address</th>
+            <th>Username</th>
           </tr>
         </thead>
         <tbody>
@@ -28,13 +29,12 @@ function UserTable() {
           </tr>
           <tr>
             <td>3</td>
-            <td>Larry the Bird</td>
-            <td></td>
+            <td colSpan={2}>Larry the Bird</td>
             <td>@twitter</td>
           </tr>
         </tbody>
       </Table>
-    </div>
+    </Container>
   );
 }
 
