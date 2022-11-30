@@ -12,6 +12,8 @@ const Desplegable = () => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
+    const [col, setCol] = useState(true); 
+
 
 
   return (
@@ -38,8 +40,8 @@ const Desplegable = () => {
       <Nav.Link href="/">Home</Nav.Link>
       <Nav.Link eventKey="link-1">Último Momento</Nav.Link>
       <hr></hr>
-      <div className='d-flex justify-content-end' ><button  className='bt-sort' ><FaSort  /></button></div>
-      <div>
+      <div className='d-flex justify-content-end' ><button onClick={() => setCol(!col)} className='bt-sort' ><FaSort  /></button></div>
+      <div className={`d-flex ${col ? "flex-column" : "flex-column-reverse"}`}>
       <Nav.Link eventKey="">Economía</Nav.Link>
       <Nav.Link eventKey="link-3">Deportes</Nav.Link>
       <Nav.Link eventKey="link-4">Mundo</Nav.Link>
