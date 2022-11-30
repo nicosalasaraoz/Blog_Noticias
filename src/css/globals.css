@@ -144,6 +144,8 @@ winter:FDF0E0;
 }
 .bt-sort{
   font-size: 20px;
+  border: none;
+  background-color: rgb(255, 255, 255);
 }
 
 

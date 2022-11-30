@@ -35,7 +35,7 @@ const Desplegable = () => {
       <Nav.Link href="/">Home</Nav.Link>
       <Nav.Link eventKey="link-1">Último Momento</Nav.Link>
       <hr></hr>
-      <div className='d-flex justify-content-end' ><Button><FaSort  /></Button></div>
+      <div className='d-flex justify-content-end' ><button  className='bt-sort' ><FaSort  /></button></div>
       <div>
       <Nav.Link eventKey="">Economía</Nav.Link>
       <Nav.Link eventKey="link-3">Deportes</Nav.Link>
