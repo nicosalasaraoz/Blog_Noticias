@@ -12,6 +12,8 @@ const Desplegable = () => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
+    const [col, setCol] = useState(true); 
+
 
 
   return (
@@ -27,8 +29,8 @@ const Desplegable = () => {
       <img
               src="./images/logo.png"
               alt="logo"
-              height="60"
-              className="pt-3 ms-2"
+              height="70"
+              className="pt-1"
             />
       </Link>
       </Offcanvas.Title>
@@ -38,15 +40,15 @@ const Desplegable = () => {
       <Nav.Link href="/">Home</Nav.Link>
       <Nav.Link eventKey="link-1">Último Momento</Nav.Link>
       <hr></hr>
-      <div className='d-flex justify-content-end' ><button  className='bt-sort' ><FaSort  /></button></div>
-      <div>
+      <div className='d-flex justify-content-end' ><button onClick={() => setCol(!col)} className='bt-sort' ><FaSort  /></button></div>
+      <div className={`d-flex ${col ? "flex-column" : "flex-column-reverse"}`}>
       <Nav.Link eventKey="">Economía</Nav.Link>
       <Nav.Link eventKey="link-3">Deportes</Nav.Link>
       <Nav.Link eventKey="link-4">Mundo</Nav.Link>
       <Nav.Link eventKey="link-5">Espectáculos</Nav.Link>
       <Nav.Link eventKey="link-6">Política</Nav.Link>
       <Nav.Link eventKey="link-7">Opinión</Nav.Link>
-      <Nav.Link eventKey="link-9" className='fw-bold fs-6'>Contenido Exclusivo</Nav.Link>
+      <a href="https://www.lavoz.com.ar/temas/exclusivo/" className='fw-bold fs-6 text-dark' style={{ textDecoration: "none" }}>Contenido Exclusivo</a>
       </div>
     </Nav>
     </Offcanvas.Body>
