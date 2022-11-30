@@ -8,7 +8,7 @@ const Error404 = () => {
       <Container fluid className="image-e">
         <Link to="/">
           <Button size="lg" variant="danger" className="bt-volver">
-            Volver al Home
+            Back to Home
           </Button>
         </Link>
       </Container>

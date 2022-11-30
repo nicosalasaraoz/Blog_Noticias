@@ -108,8 +108,8 @@ winter:FDF0E0;
 
 .bt-volver {
   position: absolute;
-  top: 80%;
-  left: 50vw;
+  top: 90%;
+  left: 45vw;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -132,17 +132,18 @@ winter:FDF0E0;
 /*Desplegable*/
 
 .desp {
-  font-size: 25px;
   border: 0;
 }
 
+.icon-desp {
+  height: 20px;
+  width: 20px;
+}
 .canv {
   width: 300px !important;
 }
-
-.canv-b {
-}
-
-.slider-size {
-  height: 50% !important;
+.bt-sort {
+  font-size: 20px;
+  border: none;
+  background-color: rgb(255, 255, 255);
 }

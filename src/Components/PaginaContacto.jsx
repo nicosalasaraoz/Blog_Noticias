@@ -3,6 +3,18 @@ import { Container, Form } from "react-bootstrap";
 import NavbarMain from "./NavbarMain";
 import { Field, Formik } from "formik";
 import Footer from "./Footer";
+import * as Yup from "yup";
+
+const SignupSchema = Yup.object().shape({
+  user: Yup.string()
+    .min(2, "Estas seguro de que este es tu nombre?")
+    .max(30, "Sobrepasaste el limite de caracteres permitidos!")
+    .required("Required"),
+  phone: Yup.string()
+    .min(2, "Too Short!")
+    .max(50, "Too Long!")
+    .required("Required"),
+});
 
 const PaginaContacto = () => {
   return (
@@ -26,7 +38,8 @@ const PaginaContacto = () => {
       </Container>
       <Container>
         <Formik
-          initialValues={{ user: "", email: "", phone: "" }}
+          initialValues={{ user: "", email: "", phone: "", message: "" }}
+          validationSchema={SignupSchema}
           validate={(values) => {
             const errors = {};
             if (!values.user) {
@@ -53,6 +66,9 @@ const PaginaContacto = () => {
             } else if (/^(\d{10})((\d{3}){0,1})$/i.test(values.phone)) {
               errors.phone =
                 "Este campo solo puede ser completado con numeros!";
+            }
+            if (!values.message) {
+              errors.email = "El campo esta vacio, completalo!";
             }
             return errors;
           }}
@@ -108,7 +124,6 @@ const PaginaContacto = () => {
                   </p>
                 </label>
                 <Field
-                  type="number"
                   name="phone"
                   values={values.pass}
                   className={`form-control ${
@@ -118,12 +133,34 @@ const PaginaContacto = () => {
                 <div style={{ color: "red" }} className="mt-1">
                   {errors.phone && touched.phone && errors.phone}
                 </div>
+                {/* <Field
+                  name="message"
+                  values={values.message}
+                  className={`ControlTextarea ${
+                    errors.message && touched.message && "is-invalid"
+                  }`}
+                />
+                <div style={{ color: "red" }} className="mt-1">
+                  {errors.message && touched.message && errors.message}
+                </div> */}
+                <Form.Group
+                  className="mb-3"
+                  controlId="exampleForm.ControlTextarea1"
+                >
+                  <Form.Label>
+                    <p className="mt-1 text-white">
+                      <b>Escribe aqui tu consulta.</b>
+                    </p>
+                  </Form.Label>
+                  <Form.Control as="textarea" rows={3} />
+                </Form.Group>
+
                 <br />
                 <div className="d-flex justify-content-center">
                   <input
                     type={"submit"}
                     value="Registrarme"
-                    className={"btn btn-secondary w-50 my-2"}
+                    className={"btn btn-secondary w-60 my-2"}
                   />
                 </div>
               </Form>
