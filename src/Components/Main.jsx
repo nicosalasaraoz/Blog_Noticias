@@ -1,6 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import ArticleList from "./ArticleList";
+import ArticleDetail from "./ArticleDetail";
 import Footer from "./Footer";
 import Header from "./Header";
 import ModalSlider from "./ModalSlider";
@@ -20,10 +21,11 @@ const Main = () => {
 
       <Routes>
         <Route path="/error404" element={<Error404 />} />
+        <Route path="/paginacontacto" element={<PaginaContacto />} />
       </Routes>
 
       <ArticleList />
-      <PaginaContacto />
+      
     </Container>
   );
 };

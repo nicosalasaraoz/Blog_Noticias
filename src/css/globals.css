@@ -75,7 +75,7 @@ winter:FDF0E0;
   background-color: rgb(69, 68, 68);
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 760px) {
   .oculto {
     visibility: hidden;
     display: none;
@@ -141,11 +141,21 @@ winter:FDF0E0;
 }
 .canv {
   width: 300px !important;
+  background-color: rgb(235, 233, 233) !important;
+  
 }
+@media only screen and (max-width: 768px) {
+  .canv{
+    height: 50%;
+    width: 95% !important;
+  }
+}
+
+
 .bt-sort {
   font-size: 20px;
-  border: none;
-  background-color: rgb(255, 255, 255);
+  border: none !important;
+  background-color: rgb(235, 233, 233);
 }
 
 .slider-size {
