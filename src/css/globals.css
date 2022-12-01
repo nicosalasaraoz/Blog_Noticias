@@ -157,3 +157,7 @@ winter:FDF0E0;
   border: none !important;
   background-color: rgb(235, 233, 233);
 }
+
+.slider-size {
+  height: 60% !important;
+}

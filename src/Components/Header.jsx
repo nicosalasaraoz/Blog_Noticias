@@ -14,10 +14,10 @@ import Desplegable from "./Desplegable";
 const Header = () => {
   return (
     <>
-      <Container className="d-flex justify-content-evenly">
-        <div className="container-fluid ">
-          <Navbar bg="light" className="">
-            <Desplegable />
+      <Container className="container-fluid">
+        <Navbar bg="light" className="">
+          <Desplegable />
+          <div className="container-fluid justify-content-between">
             <Navbar.Brand href="#home">
               <img
                 src="./images/logo.png"
@@ -26,27 +26,14 @@ const Header = () => {
                 className=""
               />
             </Navbar.Brand>
-            <div className="">
-              <nav>
-              <ul>
-                <li>
-                  <Link to="/error404" className="icono-header text-center m-2">
-                    <FaFacebookF />
-                  </Link>
-                  <Link to="/error404" className="icono-header text-center m-2">
-                    <FaTwitter />
-                  </Link>
-                  <Link to="/error404" className="icono-header text-center m-2">
-                    <FaInstagram />
-                  </Link>
-                </li>
-              </ul>
-                <small>
-                <Form>
+          </div>
+          <div className="container-fluid justify-content-end">
+            <nav className="d-flex justify-content-around">
+              <small>
+                <Form className="ocultar-busqueda">
                   <Form.Control
                     type="search"
                     placeholder="Buscar..."
-                    className="me-2"
                     aria-label="Search"
                   />
                   <Button>
@@ -58,21 +45,40 @@ const Header = () => {
                     </div>
                   </Button>
                 </Form>
-                </small>
-                </nav>
-            </div>
-          </Navbar>
-        </div>
-    </Container>
+              </small>
+              <div className="d-flex align-items-around">
+                <ul>
+                  <li>
+                    <Link
+                      to="/error404"
+                      className="icono-header text-center m-2"
+                    >
+                      <FaFacebookF />
+                    </Link>
+                    <Link
+                      to="/error404"
+                      className="icono-header text-center m-2"
+                    >
+                      <FaTwitter />
+                    </Link>
+                    <Link
+                      to="/error404"
+                      className="icono-header text-center m-2"
+                    >
+                      <FaInstagram />
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </Navbar>
+      </Container>
       <Container>
-        <div className="fluid h-50">
+        <div className="container-fluid slider-size">
           <Carousel>
             <Carousel.Item interval={1000}>
-              <img
-                className="d-block w-100 slider-size"
-                src="../images/covid.jpg"
-                alt=""
-              />
+              <img className="d-block w-100" src="../images/covid.jpg" alt="" />
               <Carousel.Caption>
                 <h3>Los casos de covid-19 aumentaron un 50% en Tucumán</h3>
               </Carousel.Caption>
