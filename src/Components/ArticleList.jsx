@@ -1,7 +1,8 @@
 import React from 'react';
 import { Row, Container } from 'react-bootstrap';
 import CardGroup from 'react-bootstrap/CardGroup';
-import Articles from "./Articles"
+import Articles from "./Articles";
+import ArticleDetail from "./ArticleDetail";
 
 const ArticleList = () => {
     const News = [{
@@ -104,6 +105,9 @@ content: "HARM EL SHEIJ.- Desde el inicio de la conferencia del clima de la ONU 
       <Row xs={2} md={4} lg={5} className="my-2">
         {News.map((a, i) => (
           <Articles a={a} key={'Articles' + i} />
+        ))}
+        {News.map((a, i) => (
+          <ArticleDetail a={a} key={'Articles' + i} />
         ))}
       </Row>
     </CardGroup>
