@@ -129,15 +129,16 @@ winter:FDF0E0;
   margin: auto;
 }
 
-/*Desplegable*/
+
 
 .desp {
   border: 0;
+  color: red;
+  cursor: pointer;
 }
 
 .icon-desp {
-  height: 20px;
-  width: 20px;
+ font-size: 30px;
 }
 .canv {
   width: 300px !important;
@@ -147,6 +148,12 @@ winter:FDF0E0;
 @media only screen and (max-width: 768px) {
   .canv{
     height: 50%;
+    width: 95% !important;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .canv{
+    height: 60%;
     width: 95% !important;
   }
 }
