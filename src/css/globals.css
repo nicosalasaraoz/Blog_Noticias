@@ -62,14 +62,14 @@
   border-radius: 5px;
 }
 
-/* Paleta de colores
 
+/*Paleta de colores*/
 navy: 0008C1;
 blue: 2146C7;
 beige:E6CBA8;
 winter:FDF0E0;
 
-/*footer*/
+
 
 .bg-footer {
   background-color: rgb(69, 68, 68);
@@ -104,29 +104,35 @@ winter:FDF0E0;
   }
 }
 
-/*error 404 */
+
 
 .bt-volver {
-  position: absolute;
+  position: relative;
   top: 90%;
-  left: 45vw;
-  display: inline-flex;
   align-items: center;
-  justify-content: center;
-
   text-align: center;
   cursor: pointer;
+  height: 40px;
+  width: 100%;
 }
 
 .image-e {
   background-image: url(/public/images/error.jpg);
-  background-size: cover;
+  background-size:cover;
   background-repeat: no-repeat;
   background-position: center;
   height: 100vh;
-  width: 100%;
   position: relative;
   margin: auto;
+}
+@media only screen and (max-width: 600px) {
+  .image-e{
+    background-size: contain;
+  }
+  .bt-volver{
+    position: relative;
+    top: 70%;
+  }
 }
 
 
@@ -138,7 +144,7 @@ winter:FDF0E0;
 }
 
 .icon-desp {
- font-size: 30px;
+  font-size: 30px;
 }
 .canv {
   width: 300px !important;
