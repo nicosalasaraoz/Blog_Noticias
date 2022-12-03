@@ -12,6 +12,7 @@ function App() {
           <Route exact path='/' element={<Layout />} />
           <Route exact path="/paginacontacto" element={<PaginaContacto />} />
           <Route path="*" element={<Error404 />} />
+          {/* <Route element={<ProductDetailContainer add={add} auth={auth} />} path="/producto/:id" /> */}
         </Routes>
       </BrowserRouter>
   );

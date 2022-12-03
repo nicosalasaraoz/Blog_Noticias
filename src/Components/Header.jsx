@@ -78,16 +78,17 @@ const Header = () => {
         <div className="container-fluid slider-size">
           <Carousel>
             <Carousel.Item interval={1000}>
-              <img className="d-block w-100" src="../images/covid.jpg" alt="" />
+              <img className="d-block w-100" src="../images/covid.jpg" alt="" height={300} />
               <Carousel.Caption>
                 <h3>Los casos de covid-19 aumentaron un 50% en Tucumán</h3>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item interval={500}>
               <img
-                className="d-block w-100 h-50"
+                className="d-block w-100"
                 src="../images/enfermeria.jpg"
                 alt=""
+                height={300}
               />
               <Carousel.Caption>
                 <h3>
@@ -98,9 +99,10 @@ const Header = () => {
             </Carousel.Item>
             <Carousel.Item>
               <img
-                className="d-block w-100 h-50"
+                className="d-block w-100"
                 src="../images/soja.jpg"
                 alt=""
+                height={300}
               />
               <Carousel.Caption>
                 <h3>

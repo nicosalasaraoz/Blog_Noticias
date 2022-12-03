@@ -1,5 +1,6 @@
 import React from "react";
 import { Container } from "react-bootstrap";
+// import ArticleDetail from "./ArticleDetail";
 import ArticleList from "./ArticleList";
 import Footer from "./Footer";
 import Header from "./Header";
@@ -10,6 +11,7 @@ const Main = () => {
       <NavbarMain />
       <Header />
       <ArticleList />
+      {/* <ArticleDetail /> */}
       <Footer />
     </Container>
   );

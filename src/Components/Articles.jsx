@@ -10,9 +10,9 @@ const Articles = ({ art }) => {
                         <Card.Text>{art.title}</Card.Text>
                     </Card.Body>
                     <Card.Footer>
-                        <Link to={`./ArticleDetail.jsx/${art.id}`}>
+                        {/* <Link to={`./ArticleDetail.jsx/${art.id}`}> */}
                         <Button>Ir al articulo</Button>
-                        </Link>
+                        {/* </Link> */}
                     </Card.Footer>
                     </Card>
                  </Container>
