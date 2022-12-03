@@ -28,7 +28,7 @@ const Header = () => {
             </Navbar.Brand>
           </div>
           <div className="container-fluid justify-content-end">
-            <nav className="d-flex justify-content-around">
+            <Nav className="d-flex justify-content-around">
               <small>
                 <Form className="ocultar-busqueda">
                   <Form.Control
@@ -37,7 +37,7 @@ const Header = () => {
                     aria-label="Search"
                   />
                   <Button>
-                    <div className="icono-busqueda">
+                    <div className="icono-busqueda ">
                       <ion-icon
                         className="icono-busqueda"
                         name="search-outline"
@@ -70,7 +70,7 @@ const Header = () => {
                   </li>
                 </ul>
               </div>
-            </nav>
+            </Nav>
           </div>
         </Navbar>
       </Container>
