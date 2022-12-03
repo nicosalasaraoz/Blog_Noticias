@@ -4,15 +4,13 @@ import { Link } from "react-router-dom";
 
 const Error404 = () => {
   return (
-    <>
-      <Container fluid className="image-e">
-        <Link to="/">
-          <Button size="lg" variant="danger" className="bt-volver">
-            Back to Home
+    
+      <Container  className="image-e">
+          <Button variant="danger" className="bt-volver">
+          <Link to="/" className="text-white" style={{ textDecoration: "none" }}>Back to Home</Link>
           </Button>
-        </Link>
       </Container>
-    </>
+    
   );
 };
 
