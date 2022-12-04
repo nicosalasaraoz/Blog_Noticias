@@ -78,18 +78,13 @@ const Header = () => {
         <div className="container-fluid slider-size">
           <Carousel>
             <Carousel.Item interval={1000}>
-              <img className="d-block w-100" src="../images/covid.jpg" alt="" height={300} />
+              <img className="d-block w-100" src="../images/covid.jpg" alt="" height={400} />
               <Carousel.Caption>
                 <h3>Los casos de covid-19 aumentaron un 50% en Tucumán</h3>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item interval={500}>
-              <img
-                className="d-block w-100"
-                src="../images/enfermeria.jpg"
-                alt=""
-                height={300}
-              />
+              <img className="d-block w-100" src="../images/enfermeria.jpg" alt="" height={400} />
               <Carousel.Caption>
                 <h3>
                   Enfermería: exigen que se acelere el pase de escuela a
@@ -98,12 +93,7 @@ const Header = () => {
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src="../images/soja.jpg"
-                alt=""
-                height={300}
-              />
+              <img className="d-block w-100" src="../images/soja.jpg" alt="" height={400} />
               <Carousel.Caption>
                 <h3>
                   El Banco Central compró U$S192 millones tras la puesta en
