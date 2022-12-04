@@ -30,7 +30,7 @@ const Header = () => {
           <div className="container-fluid justify-content-end">
             <Nav className="d-flex justify-content-around">
               <small>
-                <Form className="ocultar-busqueda">
+                <Form className="d-flex ocultar-busqueda">
                   <Form.Control
                     type="search"
                     placeholder="Buscar..."

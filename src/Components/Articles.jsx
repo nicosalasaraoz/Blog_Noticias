@@ -1,5 +1,6 @@
 import { Container, Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { BiLike } from 'react-icons/bi';
 
 const Articles = ({ art }) => {
               return (
@@ -9,10 +10,15 @@ const Articles = ({ art }) => {
                     <Card.Body style={{ height: '10rem' }}>
                         <Card.Text>{art.title}</Card.Text>
                     </Card.Body>
-                    <Card.Footer>
+                    <Card.Footer className="d-flex justify-content-between">
                         {/* <Link to={`./ArticleDetail.jsx/${art.id}`}> */}
                         <Button>Ir al articulo</Button>
                         {/* </Link> */}
+                        <Button >
+                            <Link to="/error404" className="icono-header text-center text-white m-0">
+                                <BiLike />
+                            </Link>
+                        </Button>                        
                     </Card.Footer>
                     </Card>
                  </Container>
