@@ -11,9 +11,9 @@ const Articles = ({ art }) => {
                         <Card.Text>{art.title}</Card.Text>
                     </Card.Body>
                     <Card.Footer className="d-flex justify-content-between">
-                        {/* <Link to={`./ArticleDetail.jsx/${art.id}`}> */}
+                        <Link to={`./ArticleDetail.jsx/${art.id}`}>
                         <Button>Ir al articulo</Button>
-                        {/* </Link> */}
+                        </Link>
                         <Button >
                             <Link to="/error404" className="icono-header text-center text-white m-0">
                                 <BiLike />

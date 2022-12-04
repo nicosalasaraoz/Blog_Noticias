@@ -1,34 +1,36 @@
-// import {Card, Container, Row, Col} from 'react-bootstrap';
+import {Card, Container, Row, Col} from 'react-bootstrap';
 
-// const ArticleDetail = ({art}) => {
-//   return (
-//     <Container className="pt-4">
-//       <Card className="border-0">
-//         <Row>
-//           <Col>
-//             <Card.Img variant="top" src={art.url} />
-//           </Col>
-//           <Col>
-//             <Container>
-//               <Card.Text as="h1">
-//                 {art.title}
-//               </Card.Text>
-//               <Container className="d-flex justify-content-between">              
-//               </Container>
-//             </Container>
-//           </Col>
-//         </Row>
-//         <Card.Body>
-//           <Card.Text>
-//             {art.description}
-//           </Card.Text>
-//         </Card.Body>
-//       </Card>
-//     </Container>
-//   );
-// };
+const ArticleDetail = ({News}) => {
+  return (
+    <Container className="pt-4">
+        {News?.map((art, i) => (       
+        <Card className="border-0">
+          <Row>
+            <Col>
+              <Card.Img variant="top" src={art.url} />
+            </Col>
+            <Col>
+              <Container>
+                <Card.Text as="h1">
+                  {art.title}
+                </Card.Text>
+                <Container className="d-flex justify-content-between">              
+                </Container>
+              </Container>
+            </Col>
+          </Row>
+          <Card.Body>
+            <Card.Text>
+              {art.description}
+            </Card.Text>
+          </Card.Body>
+        </Card>
+       ))}
+    </Container>
+  );
+};
 
-// export default ArticleDetail;
+export default ArticleDetail;
 
 
 // import { useState, useEffect } from "react";

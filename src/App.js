@@ -6,6 +6,7 @@ import Error404 from "./Components/Error404";
 import Layout from "./pages/Layout";
 import PaginaContacto from "./Components/PaginaContacto";
 import Main from "./Components/Main";
+import ArticleDetail from "./Components/ArticleDetail";
 
 
 function App() {
@@ -110,8 +111,7 @@ content: "Año tras año, los premios L’Oréal-Unesco “Por las mujeres en la
             <Route exact path='/' element={<Layout />} />
             <Route exact path="/paginacontacto" element={<PaginaContacto />} />
             <Route path="*" element={<Error404 />} />
-            {/* <Route element={<ArticleDetailContainer News = {News} />} path="/Article/:id" /> */}
-            {/* <Route exact path="/ArticleList" element={<ArticleList  News = {News} />} /> */}
+            <Route element={<ArticleDetail News = {News} />} path="/ArticleDetail/:id" />
           </Routes>
       </BrowserRouter>
   );
