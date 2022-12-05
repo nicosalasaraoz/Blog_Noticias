@@ -7,12 +7,12 @@ function TablaDestacados() {
     {
       id: 1,
       titulo: "Juan Ramirez",
-      imagen: "jramirez",
+      imagen: "",
     },
     {
       id: 2,
       titulo: "Paola Ortiz",
-      imagen: "admin",
+      imagen: "",
     },
   ];
   return (
@@ -30,6 +30,9 @@ function TablaDestacados() {
             <tr>
               <td>{usuario.titulo}</td>
               <td>{usuario.imagen}</td>
+              <td>
+                <Button variant="success">Editar</Button>
+              </td>
               <td>
                 <Button variant="danger">Eliminar</Button>
               </td>

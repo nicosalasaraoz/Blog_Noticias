@@ -102,9 +102,9 @@ const ModalLogin = ({ show, handleClose }) => {
                 <div style={{ color: "red" }} className="mt-1">
                   {errors.pass && touched.pass && errors.pass}
                 </div>
-                <p className="text-center mt-4">
-                  Olvidaste tu contraseña? Click aquí.
-                </p>
+                <a href="./Contraseña.jsx" className="text-center mt-4 mb-4">
+                  Olvidaste tu contraseña? Haz click aquí
+                </a>
                 <br />
                 <div className="d-flex justify-content-center">
                   <input
