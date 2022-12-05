@@ -75,7 +75,7 @@ const Header = () => {
         </Navbar>
       </Container>
       <Container>
-        <div className="container-fluid slider-size">
+        <div className="container-fluid carousel-inner">
           <Carousel>
             <Carousel.Item interval={1000}>
               <img className="d-block w-100" src="../images/covid.jpg" alt="" height={400} />

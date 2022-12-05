@@ -149,10 +149,9 @@ winter:FDF0E0;
 .canv {
   width: 300px !important;
   background-color: rgb(235, 233, 233) !important;
-  
 }
 @media only screen and (max-width: 768px) {
-  .canv{
+  .canv {
     height: 50%;
     width: 95% !important;
   }
@@ -164,13 +163,17 @@ winter:FDF0E0;
   }
 }
 
-
 .bt-sort {
   font-size: 20px;
   border: none !important;
   background-color: rgb(235, 233, 233);
 }
 
-.slider-size {
-  height: 60% !important;
+.carousel-inner img {
+  width: 100%;
+  max-height: 600px;
+}
+
+.carousel-inner {
+  height: 650px;
 }
