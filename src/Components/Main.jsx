@@ -2,7 +2,6 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import ArticleList from "./ArticleList";
 import ArticleDetail from "./ArticleDetail";
-// import Articles from "./Articles";
 import Footer from "./Footer";
 import Header from "./Header";
 import NavbarMain from "./NavbarMain";
@@ -13,8 +12,12 @@ const Main = ({ News }) => {
       <NavbarMain />
       <Header />
       <ArticleList News={News} />
+<<<<<<< Updated upstream
       {/* <ArticleDetail News={News} /> */}
       {/* <Articles /> */}
+=======
+      <ArticleDetail News={News}/>
+>>>>>>> Stashed changes
       <Footer />
     </Container>
   );

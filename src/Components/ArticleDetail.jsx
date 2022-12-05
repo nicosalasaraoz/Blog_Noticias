@@ -29,28 +29,17 @@
 // export default ArticleDetail;
 
 // import { useState, useEffect } from "react";
-// import Button from "react-bootstrap/Button";
-// import Card from "react-bootstrap/Card";
-// import Container from "react-bootstrap/Container";
-// import { Link } from "react-router-dom";
-// import Modal from "react-bootstrap/Modal";
-// import Form from "react-bootstrap/Form";
 // import { toast } from "react-toastify";
-
-// import ProductCounter from "./ProductCounter";
 // import ProductList from "./ProductList";
 
-// const ProductDetail = ({ product, add, auth }) => {
-//   const [counter, setCounter] = useState(1);
+// const ArticleDetail = ({ product, add, auth }) => {
 //   const [show, setShow] = useState(false);
 //   const [submitOk, setSubmitOk] = useState(null);
 
 //   const handleClose = () => setShow(false);
 //   const handleShow = () => setShow(true);
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//     setSubmitOk(null);
-//     fetch("https://rcs-3i-api-node.vercel.app/products/update/" + product._id, {
+//   const handleSubmit = (e) => {e.preventDefault(); setSubmitOk(null);
+//       fetch("https://rcs-3i-api-node.vercel.app/products/update/" + product._id, {
 //       method: "PUT",
 //       headers: {
 //         "Content-Type": "application/json",
@@ -213,4 +202,8 @@
 //   );
 // };
 
+<<<<<<< Updated upstream
 // export default ProductDetail;
+=======
+// export default ArticleDetail;
+>>>>>>> Stashed changes
