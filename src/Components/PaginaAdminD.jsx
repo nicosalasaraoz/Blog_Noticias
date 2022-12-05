@@ -2,23 +2,21 @@ import React from "react";
 import { Container, Button } from "react-bootstrap";
 import Table from "react-bootstrap/Table";
 
-function TablaUsuario() {
-  const Usuarios = [
+function TablaDestacados() {
+  const usuarios = [
     {
       id: 1,
-      nombreYapellido: "Juan Ramirez",
-      nombreDeUsuario: "jramirez",
-      role: "usuario",
+      titulo: "Juan Ramirez",
+      imagen: "jramirez",
     },
     {
       id: 2,
-      nombreYapellido: "Paola Ortiz",
-      nombreDeUsuario: "admin",
-      role: "administrador",
+      titulo: "Paola Ortiz",
+      imagen: "admin",
     },
   ];
   return (
-    <Container className="container-fluid">
+    <Container>
       <Table striped bordered hover>
         <thead>
           <tr>
@@ -30,9 +28,8 @@ function TablaUsuario() {
         <tbody>
           {Usuarios.map((usuario) => (
             <tr>
-              <td>{usuario.nombreYapellido}</td>
-              <td>{usuario.nombreDeUsuario}</td>
-              <td>{usuario.role}</td>
+              <td>{usuario.titulo}</td>
+              <td>{usuario.imagen}</td>
               <td>
                 <Button variant="danger">Eliminar</Button>
               </td>
@@ -44,4 +41,4 @@ function TablaUsuario() {
   );
 }
 
-export default TablaUsuario;
+export default TablaDestacados;
