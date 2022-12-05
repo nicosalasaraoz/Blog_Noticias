@@ -12,12 +12,8 @@ const Main = ({ News }) => {
       <NavbarMain />
       <Header />
       <ArticleList News={News} />
-<<<<<<< Updated upstream
       {/* <ArticleDetail News={News} /> */}
       {/* <Articles /> */}
-=======
-      <ArticleDetail News={News}/>
->>>>>>> Stashed changes
       <Footer />
     </Container>
   );

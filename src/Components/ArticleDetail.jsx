@@ -202,8 +202,4 @@
 //   );
 // };
 
-<<<<<<< Updated upstream
 // export default ProductDetail;
-=======
-// export default ArticleDetail;
->>>>>>> Stashed changes
