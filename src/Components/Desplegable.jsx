@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
-import Button from 'react-bootstrap/Button';
+
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { FaAlignJustify, FaSort } from 'react-icons/fa';
 import { Link } from "react-router-dom";
@@ -18,9 +18,9 @@ const Desplegable = () => {
 
   return (
     <>
-    <Button  variant="outline-secondary"  className="desp"  onClick={handleShow}>
+    <span className="desp p-1"  onClick={handleShow}>
     <FaAlignJustify className='icon-desp'/> 
-  </Button>
+    </span>
 
   <Offcanvas className="canv" show={show} onHide={handleClose} >
     <Offcanvas.Header closeButton >

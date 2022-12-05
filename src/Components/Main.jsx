@@ -1,29 +1,22 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-
+import ArticleList from "./ArticleList";
+import ArticleDetail from "./ArticleDetail";
+// import Articles from "./Articles";
 import Footer from "./Footer";
 import Header from "./Header";
 import NavbarMain from "./NavbarMain";
-import Error404 from "./Error404";
-import { Route, Routes } from "react-router-dom";
-import PaginaContacto from "./PaginaContacto";
-import PaginaAdmin from "./PaginaAdmin";
 
-const Main = () => {
+const Main = ({ News }) => {
   return (
     <Container fluid className="d-flex flex-column min-vh-100 px-0">
       <NavbarMain />
       <Header />
-
+      <ArticleList News={News} />
+      <ArticleDetail News={News} />
+      {/* <Articles /> */}
       <Footer />
-
-      <Routes>
-        <Route path="/error404" element={<Error404 />} />
-        <Route path="/paginacontacto" element={<PaginaContacto />} />
-      </Routes>
-      <PaginaAdmin />
     </Container>
   );
 };
-
 export default Main;

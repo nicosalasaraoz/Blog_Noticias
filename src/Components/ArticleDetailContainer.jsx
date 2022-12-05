@@ -1,8 +1,8 @@
-// import React, { useState,  useEffect,} from 'react';
+// import {React, useState, useEffect,} from 'react';
 // import ProductDetail from './ProductDetail';
 // import { useParams } from 'react-router-dom';
 
-// const NewsDetail = ({ add }) => {
+// const ProductDetailContainer = ({ add }) => {
 //   const params = useParams();
 
 //   const [data, setData] = useState([]);
@@ -13,7 +13,7 @@
 //       .then(res => res.json())
 //       .then(json => setData(json));
 //   }, []);
-//   return <News data={data} add={add} />;
+//   return <ProductDetail data={data} add={add} />;
 // };
 
-// export default NewsDetail;
+// export default ProductDetailContainer;
