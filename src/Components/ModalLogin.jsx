@@ -1,9 +1,28 @@
 import { Field, Formik } from "formik";
 import React from "react";
+import { useState } from "react";
 import { Container, Form } from "react-bootstrap";
 import Modal from "react-bootstrap/Modal";
 
 const ModalLogin = ({ show, handleClose }) => {
+  const [email, setEmail] = useState("");
+  const [pass, setPass] = useState("");
+
+  const handleSubmitBack = () => {
+    fetch("http://localhost:3002/user/login", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify({
+        usuario: email,
+        contraseña: pass,
+      }),
+    })
+      .then((res) => res.json())
+      .then((res) => console.log("response", res));
+  };
+
   return (
     <Modal show={show} onHide={handleClose}>
       <Modal.Header closeButton className="bg-navbar">
@@ -56,6 +75,8 @@ const ModalLogin = ({ show, handleClose }) => {
                   <b>Email</b>
                 </label>
                 <Field
+                  onInput={(e) => setEmail(e.target.value)}
+                  type="mail"
                   name="email"
                   value={values.email}
                   className={`form-control ${
@@ -70,6 +91,7 @@ const ModalLogin = ({ show, handleClose }) => {
                   <b> Contraseña </b>
                 </label>
                 <Field
+                  onInput={(e) => setPass(e.target.value)}
                   type="password"
                   name="pass"
                   value={values.pass}
@@ -86,6 +108,7 @@ const ModalLogin = ({ show, handleClose }) => {
                 <br />
                 <div className="d-flex justify-content-center">
                   <input
+                    onClick={() => handleSubmitBack()}
                     type={"submit"}
                     value="Ingresar"
                     className={"btn btn-success w-50 my-2"}
