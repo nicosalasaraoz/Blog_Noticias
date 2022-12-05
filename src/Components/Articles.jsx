@@ -13,11 +13,7 @@ const Articles = ({ art }) => {
                     <Card.Footer className="d-flex justify-content-between">
                         <Link to={`/Article/${art.id}`}>
                         <Button 
-//                         onClick={() =>
-// //                     ({
-// //                       id: Article._id,
-// //                       title: Article.title,
-// //                     })
+//                         onClick={() => ({id: Article._id, title: Article.title})
                         >Ir al articulo</Button>
                         </Link>
                         <Button >
