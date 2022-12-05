@@ -1,8 +1,6 @@
 import React from "react";
 import { Container, Form } from "react-bootstrap";
-import NavbarMain from "./NavbarMain";
 import { Field, Formik } from "formik";
-import Footer from "./Footer";
 import * as Yup from "yup";
 
 const SignupSchema = Yup.object().shape({
@@ -19,7 +17,6 @@ const SignupSchema = Yup.object().shape({
 const PaginaContacto = () => {
   return (
     <>
-      <NavbarMain />
       <Container className="d-flex fluid justify-content-center">
         <img
           src="./images/logo.png"
@@ -168,7 +165,7 @@ const PaginaContacto = () => {
           )}
         </Formik>
       </Container>
-      <Footer />
+
     </>
   );
 };

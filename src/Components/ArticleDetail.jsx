@@ -11,7 +11,7 @@
 //   const handleClose = () => setShow(false);
 //   const handleShow = () => setShow(true);
 //   const handleSubmit = (e) => {e.preventDefault(); setSubmitOk(null);
-//       fetch(" " + Article._id, {
+//       fetch("https://grupo-3-news-back-end.vercel.app/" + Article._id, {
 //       method: "PUT",
 //       headers: {
 //         "Content-Type": "application/json",
