@@ -13,7 +13,7 @@ const Main = ({ News }) => {
       <NavbarMain />
       <Header />
       <ArticleList News={News} />
-      <ArticleDetail News={News} />
+      {/* <ArticleDetail News={News} /> */}
       {/* <Articles /> */}
       <Footer />
     </Container>
