@@ -14,11 +14,9 @@ const Articles = ({ art }) => {
                         <Link to={`/Article/${art.id}`}>
                         <Button 
 //                         onClick={() =>
-// //                     add({
-// //                       id: product._id,
-// //                       title: product.title,
-// //                       price: product.price,
-// //                       q: counter,
+// //                     ({
+// //                       id: Article._id,
+// //                       title: Article.title,
 // //                     })
                         >Ir al articulo</Button>
                         </Link>
