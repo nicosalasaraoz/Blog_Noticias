@@ -8,19 +8,22 @@ const ModalLogin = ({ show, handleClose }) => {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
 
-  const handleSubmitBack = () => {
+  const handleSubmitBack = (e) => {
+    e.preventDefault();
+
     fetch("http://localhost:3002/user/login", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
       },
       body: JSON.stringify({
-        usuario: email,
-        contraseña: pass,
+        email: email,
+        pass: pass,
       }),
     })
       .then((res) => res.json())
-      .then((res) => console.log("response", res));
+      .then((res) => console.log(res))
+      .catch((error) => console.log(error));
   };
 
   return (
@@ -108,7 +111,7 @@ const ModalLogin = ({ show, handleClose }) => {
                 <br />
                 <div className="d-flex justify-content-center">
                   <input
-                    onClick={() => handleSubmitBack()}
+                    onClick={(e) => handleSubmitBack(e)}
                     type={"submit"}
                     value="Ingresar"
                     className={"btn btn-success w-50 my-2"}

@@ -1,9 +1,35 @@
 import { Field, Formik } from "formik";
 import React from "react";
+import { useState } from "react";
 import { Container, Form } from "react-bootstrap";
 import Modal from "react-bootstrap/Modal";
 
 const ModalRegistro = ({ registro, handleCerrar }) => {
+  const [email, setEmail] = useState("");
+  const [pass, setPass] = useState("");
+  const [name, setName] = useState("");
+  const [repeatPass, setRepeatPass] = useState("");
+
+  const handleSubmitBack = (e) => {
+    e.preventDefault();
+
+    fetch("http://localhost:3002/user/register", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify({
+        name: name,
+        email: email,
+        pass: pass,
+        repeatPass: repeatPass,
+      }),
+    })
+      .then((res) => res.json())
+      .then((res) => console.log(res))
+      .catch((error) => console.log(error));
+  };
+
   return (
     <Modal show={registro} onHide={handleCerrar}>
       <Modal.Header closeButton className="bg-navbar">
@@ -77,6 +103,7 @@ const ModalRegistro = ({ registro, handleCerrar }) => {
                   <b>Nombre Completo</b>
                 </label>
                 <Field
+                  onInput={(e) => setName(e.target.value)}
                   name="user"
                   values={values.user}
                   className={`form-control ${
@@ -91,6 +118,7 @@ const ModalRegistro = ({ registro, handleCerrar }) => {
                   <b>Tu Correo electronico</b>
                 </label>
                 <Field
+                  onInput={(e) => setEmail(e.target.value)}
                   name="email"
                   values={values.email}
                   className={`form-control ${
@@ -111,6 +139,7 @@ const ModalRegistro = ({ registro, handleCerrar }) => {
                   </p>
                 </label>
                 <Field
+                  onInput={(e) => setPass(e.target.value)}
                   type="password"
                   name="pass"
                   values={values.pass}
@@ -126,6 +155,7 @@ const ModalRegistro = ({ registro, handleCerrar }) => {
                   <b>Repite tu contraseña</b>
                 </label>
                 <Field
+                  onInput={(e) => setRepeatPass(e.target.value)}
                   type="password"
                   name="repeatPass"
                   values={values.repeatPass}
@@ -139,6 +169,7 @@ const ModalRegistro = ({ registro, handleCerrar }) => {
                 <br />
                 <div className="d-flex justify-content-center">
                   <input
+                    onClick={(e) => handleSubmitBack(e)}
                     type={"submit"}
                     value="Registrarme"
                     className={"btn btn-success w-50 my-2"}
