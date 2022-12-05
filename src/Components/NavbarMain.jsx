@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button, Container, Form, Nav, Navbar } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import ModalLogin from "./ModalLogin";
 import ModalRegistro from "./ModalRegistro";
 
@@ -23,11 +24,13 @@ const NavbarMain = () => {
           />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav>
-              <Nav.Link className="text-dark mb-1 mx-2" href="#pricing">
-                <div className="icono-call">
-                  <ion-icon name="call"></ion-icon>
-                </div>
-              </Nav.Link>
+              <Link to="/paginacontacto">
+                <Nav.Link className="text-dark mb-1 mx-2" href="#pricing">
+                  <div className="icono-call">
+                    <ion-icon name="call"></ion-icon>
+                  </div>
+                </Nav.Link>
+              </Link>
               <Nav.Link className="text-dark mb-1 mx-2" href="#home">
                 <div className="icono-home">
                   <ion-icon name="home"></ion-icon>

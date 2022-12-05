@@ -7,7 +7,7 @@ const ArticleList = ({News}) => {
   return (
     <Container>
       <CardGroup>
-      <Row xs={2} md={4} lg={5} className="my-2">
+      <Row xs={2} md={4} lg={5} className="my-2 ">
         {News?.map((art, i) => (
           <Articles art={art} key={'Articles' + i} />
         ))}

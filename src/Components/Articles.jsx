@@ -11,11 +11,17 @@ const Articles = ({ art }) => {
                         <Card.Text>{art.title}</Card.Text>
                     </Card.Body>
                     <Card.Footer className="d-flex justify-content-between">
-                        <Link to={`./ArticleDetail.jsx/${art.id}`}>
-                        <Button>Ir al articulo</Button>
+                        <Link to={`/Article/${art.id}`}>
+                        <Button 
+//                         onClick={() =>
+// //                     ({
+// //                       id: Article._id,
+// //                       title: Article.title,
+// //                     })
+                        >Ir al articulo</Button>
                         </Link>
                         <Button >
-                            <Link to="/error404" className="icono-header text-center text-white m-0">
+                            <Link to="/error404" className="text-center text-white m-0">
                                 <BiLike />
                             </Link>
                         </Button>                        
