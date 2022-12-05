@@ -1,9 +1,10 @@
-import {Card, Container, Row, Col} from 'react-bootstrap';
+import { useState } from "react";
+import { Card, Container, Row, Col } from "react-bootstrap";
 
-const ArticleDetail = ({News}) => {
+const ArticleDetail = ({ News }) => {
   return (
     <Container className="pt-4">
-        {News?.map((art, i) => (       
+      {News?.map((art, i) => (
         <Card className="border-0">
           <Row>
             <Col>
@@ -11,27 +12,21 @@ const ArticleDetail = ({News}) => {
             </Col>
             <Col>
               <Container>
-                <Card.Text as="h1">
-                  {art.title}
-                </Card.Text>
-                <Container className="d-flex justify-content-between">              
-                </Container>
+                <Card.Text as="h1">{art.title}</Card.Text>
+                <Container className="d-flex justify-content-between"></Container>
               </Container>
             </Col>
           </Row>
           <Card.Body>
-            <Card.Text>
-              {art.description}
-            </Card.Text>
+            <Card.Text>{art.description}</Card.Text>
           </Card.Body>
         </Card>
-       ))}
+      ))}
     </Container>
   );
 };
 
 export default ArticleDetail;
-
 
 // import { useState, useEffect } from "react";
 // import Button from "react-bootstrap/Button";
