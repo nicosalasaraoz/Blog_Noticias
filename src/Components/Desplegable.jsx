@@ -18,7 +18,7 @@ const Desplegable = () => {
 
   return (
     <>
-    <span className="desp p-1"  onClick={handleShow}>
+    <span className="desp m-1"  onClick={handleShow}>
     <FaAlignJustify className='icon-desp'/> 
     </span>
 
