@@ -10,6 +10,11 @@
     rgba(38, 40, 41, 1) 100%
   );
 }
+.icon-tog{
+  display: flex !important;
+  justify-content: flex-end !important;
+}
+
 
 .icono-fav {
   color: gold;
@@ -152,13 +157,14 @@ winter:FDF0E0;
 }
 @media only screen and (max-width: 768px) {
   .canv {
-    height: 50%;
+    height: 60%;
     width: 95% !important;
   }
 }
 @media only screen and (max-width: 425px) {
   .canv{
-    height: 60%;
+    display: none;
+    height: 70%;
     width: 95% !important;
   }
 }
