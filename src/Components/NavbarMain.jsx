@@ -16,8 +16,8 @@ const NavbarMain = () => {
   const handleMostrar = () => setRegistro(true);
   return (
     <>
-      <Navbar bg="dark" expand="lg" className="bg-navbar">
-        <Container>
+      <Navbar bg="dark" expand="md" className="bg-navbar">
+        <Container className="icon-tog">
           <Navbar.Toggle
             aria-controls="basic-navbar-nav"
             className="bg-light"

@@ -10,6 +10,11 @@
     rgba(38, 40, 41, 1) 100%
   );
 }
+.icon-tog{
+  display: flex !important;
+  justify-content: flex-end !important;
+}
+
 
 .icono-fav {
   color: gold;
@@ -20,6 +25,7 @@
 .icono-busqueda {
   color: rgb(255, 255, 255);
   font-size: 20px;
+  
 }
 
 .icono-login {
@@ -62,6 +68,12 @@
   border-radius: 5px;
 }
 
+.title{
+  color: #fcfafb;
+  font-size: 25px;
+  transform:translateY(-30%);
+  text-shadow: 2px 2px 2px rgb(202, 8, 8);
+}
 
 /*Paleta de colores
 navy: 0008C1;
@@ -141,10 +153,12 @@ winter:FDF0E0;
   border: 0;
   color: red;
   cursor: pointer;
+  
 }
 
 .icon-desp {
   font-size: 30px;
+  
 }
 .canv {
   width: 300px !important;
@@ -152,13 +166,14 @@ winter:FDF0E0;
 }
 @media only screen and (max-width: 768px) {
   .canv {
-    height: 50%;
+    height: 60%;
     width: 95% !important;
   }
 }
 @media only screen and (max-width: 425px) {
   .canv{
-    height: 60%;
+    display: none;
+    height: 70%;
     width: 95% !important;
   }
 }

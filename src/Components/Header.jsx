@@ -14,20 +14,20 @@ import Desplegable from "./Desplegable";
 const Header = () => {
   return (
     <>
-      <Container className="container-fluid">
-        <Navbar bg="light" className="">
-          <Desplegable />
-          <div className="container-fluid justify-content-between">
-            <Navbar.Brand href="#home">
+    <Navbar bg="light" className="">
+      <Container fluid >
+        <div>
+        <Desplegable />
+      <Navbar.Brand href="#home">
               <img
                 src="./images/logo.png"
                 alt="logo"
-                height="60"
-                className=""
+                height="50"
+                className="mt-2"
               />
-            </Navbar.Brand>
-          </div>
-          <div className="container-fluid justify-content-end">
+              </Navbar.Brand>
+        </div>
+          <div className="">
             <Nav className="d-flex justify-content-around">
               <small>
                 <Form className="d-flex ocultar-busqueda">
@@ -72,21 +72,21 @@ const Header = () => {
               </div>
             </Nav>
           </div>
-        </Navbar>
       </Container>
+      </Navbar>
       <Container>
-        <div className="container-fluid carousel-inner">
+        <div className="container-fluid carousel-inner mt-3">
           <Carousel>
             <Carousel.Item interval={1000}>
               <img className="d-block w-100" src="../images/covid.jpg" alt="" height={400} />
               <Carousel.Caption>
-                <h3>Los casos de covid-19 aumentaron un 50% en Tucumán</h3>
+                <h3 className="title">Los casos de covid-19 aumentaron un 50% en Tucumán</h3>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item interval={500}>
               <img className="d-block w-100" src="../images/enfermeria.jpg" alt="" height={400} />
               <Carousel.Caption>
-                <h3>
+                <h3 className="title">
                   Enfermería: exigen que se acelere el pase de escuela a
                   facultad y temen que se trunque el proyecto
                 </h3>
@@ -95,7 +95,7 @@ const Header = () => {
             <Carousel.Item>
               <img className="d-block w-100" src="../images/soja.jpg" alt="" height={400} />
               <Carousel.Caption>
-                <h3>
+                <h3 className="title">
                   El Banco Central compró U$S192 millones tras la puesta en
                   marcha del dólar soja
                 </h3>
