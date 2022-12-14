@@ -7,7 +7,7 @@ const Articles = ({ art }) => {
                 <Container>
                     <Card className="p-0 my-2">
                     <Card.Img variant="top" src={art.url} className="p-1" />
-                    <Card.Body style={{ height: '10rem' }}>
+                    <Card.Body style={{ height: '9rem' }}>
                         <Card.Text>{art.title}</Card.Text>
                     </Card.Body>
                     <Card.Footer className="d-flex justify-content-between">
