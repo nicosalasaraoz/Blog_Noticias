@@ -10,11 +10,23 @@
     rgba(38, 40, 41, 1) 100%
   );
 }
-.icon-tog{
+
+@media only screen and (max-width: 768px) {
+  .btn-nav {
+    height: 35px !important;
+  }
+}
+
+@media only screen and (min-width: 650px) {
+  .sec-nav {
+    display: none;
+  }
+}
+
+.icon-tog {
   display: flex !important;
   justify-content: flex-end !important;
 }
-
 
 .icono-fav {
   color: gold;
@@ -25,7 +37,6 @@
 .icono-busqueda {
   color: rgb(255, 255, 255);
   font-size: 20px;
-  
 }
 
 .icono-login {
@@ -68,10 +79,10 @@
   border-radius: 5px;
 }
 
-.title{
+.title {
   color: #fcfafb;
   font-size: 25px;
-  transform:translateY(-30%);
+  transform: translateY(-30%);
   text-shadow: 2px 2px 2px rgb(202, 8, 8);
 }
 
@@ -81,7 +92,6 @@ blue: 2146C7;
 beige:E6CBA8;
 winter:FDF0E0;
 */
-
 
 .bg-footer {
   background-color: rgb(69, 68, 68);
@@ -116,8 +126,6 @@ winter:FDF0E0;
   }
 }
 
-
-
 .bt-volver {
   position: relative;
   top: 90%;
@@ -130,7 +138,7 @@ winter:FDF0E0;
 
 .image-e {
   background-image: url(/public/images/error.jpg);
-  background-size:cover;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   height: 100vh;
@@ -138,30 +146,26 @@ winter:FDF0E0;
   margin: auto;
 }
 @media only screen and (max-width: 600px) {
-  .image-e{
+  .image-e {
     background-size: contain;
   }
-  .bt-volver{
+  .bt-volver {
     position: relative;
     top: 70%;
   }
 }
 
-
-
 .desp {
   border: 0;
   color: red;
   cursor: pointer;
-  
 }
 
 .icon-desp {
   font-size: 30px;
-  
 }
-@media only screen and (max-width: 768px) {
-  .desp{
+@media only screen and (max-width: 650px) {
+  .desp {
     visibility: hidden;
     display: none;
   }
@@ -177,7 +181,7 @@ winter:FDF0E0;
   }
 }
 @media only screen and (max-width: 425px) {
-  .canv{
+  .canv {
     display: none;
     height: 70%;
     width: 95% !important;
