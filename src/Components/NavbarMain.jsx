@@ -24,23 +24,31 @@ const NavbarMain = () => {
           />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav>
-              <Link to="/paginacontacto">
+              <div className="d-flex justify-content-center">
                 <Nav.Link className="text-dark mb-1 mx-2" href="#pricing">
                   <div className="icono-call">
-                    <ion-icon name="call"></ion-icon>
+                    <Link
+                      to="/paginacontacto"
+                      className="text-white"
+                      style={{ textDecoration: "none" }}
+                    >
+                      <ion-icon name="call"></ion-icon>
+                    </Link>
                   </div>
                 </Nav.Link>
-              </Link>
-              <Nav.Link className="text-dark mb-1 mx-2" href="#home">
-                <div className="icono-home">
-                  <ion-icon name="home"></ion-icon>
-                </div>
-              </Nav.Link>
-              <Nav.Link className="text-dark mb-1 mx-2" href="#features">
-                <div className="icono-destacados">
-                  <ion-icon name="heart"></ion-icon>
-                </div>
-              </Nav.Link>
+
+                <Nav.Link className="text-dark mb-1 mx-2" href="#home">
+                  <div className="icono-home">
+                    <Link
+                      to="/"
+                      className="text-white"
+                      style={{ textDecoration: "none" }}
+                    >
+                      <ion-icon name="home"></ion-icon>
+                    </Link>
+                  </div>
+                </Nav.Link>
+              </div>
             </Nav>
             <Container>
               <Form className="d-flex justify-content-center no-wrap ocultar-buscador">
@@ -64,7 +72,7 @@ const NavbarMain = () => {
             <Nav>
               <Button
                 variant="outline-secondary"
-                className="d-flex align-items-center justify-content-center mx-1 mb-2"
+                className="d-flex align-items-center justify-content-center mx-1 mb-2 btn-nav"
                 size="sm"
               >
                 <div className="icono-fav">
@@ -76,7 +84,7 @@ const NavbarMain = () => {
               </Button>
               <Button
                 variant="danger"
-                className="d-flex align-items-center justify-content-center mx-1 mb-2"
+                className="d-flex align-items-center justify-content-center mx-1 mb-2 btn-nav"
                 onClick={handleShow}
               >
                 <div className="icono-login">
@@ -88,13 +96,44 @@ const NavbarMain = () => {
               </Button>
               <Button
                 variant="primary"
-                className="mx-1 mb-2"
+                className="d-flex align-items-center justify-content-center mx-1 mb-2 btn-nav"
                 onClick={handleMostrar}
               >
                 <p className="m-1">
                   <b>Registrarse</b>
                 </p>
               </Button>
+              <div className="sec-nav">
+                <hr className="text-white" />
+                <h3 className="text-white fs-5">SECCIONES</h3>
+                <div>
+                  <Nav.Link className="text-white" eventKey="">
+                    Economía
+                  </Nav.Link>
+                  <Nav.Link className="text-white" eventKey="link-3">
+                    Deportes
+                  </Nav.Link>
+                  <Nav.Link className="text-white" eventKey="link-4">
+                    Mundo
+                  </Nav.Link>
+                  <Nav.Link className="text-white" eventKey="link-5">
+                    Espectáculos
+                  </Nav.Link>
+                  <Nav.Link className="text-white" eventKey="link-6">
+                    Política
+                  </Nav.Link>
+                  <Nav.Link className="text-white" eventKey="link-7">
+                    Opinión
+                  </Nav.Link>
+                  <a
+                    href="https://www.lavoz.com.ar/temas/exclusivo/"
+                    className="fw-bold fs-6 text-white"
+                    style={{ textDecoration: "none" }}
+                  >
+                    Contenido Exclusivo
+                  </a>
+                </div>
+              </div>
             </Nav>
           </Navbar.Collapse>
         </Container>
