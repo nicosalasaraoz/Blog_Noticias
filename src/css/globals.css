@@ -82,8 +82,8 @@
 .title {
   color: #fcfafb;
   font-size: 25px;
-  transform: translateY(-30%);
-  text-shadow: 2px 2px 2px rgb(202, 8, 8);
+  background-color: rgba(0, 0, 0, 0.76);
+  border-radius: 5px;
 }
 
 /*Paleta de colores
