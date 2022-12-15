@@ -160,6 +160,12 @@ winter:FDF0E0;
   font-size: 30px;
   
 }
+@media only screen and (max-width: 768px) {
+  .desp{
+    visibility: hidden;
+    display: none;
+  }
+}
 .canv {
   width: 300px !important;
   background-color: rgb(235, 233, 233) !important;
