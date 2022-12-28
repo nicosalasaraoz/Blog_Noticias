@@ -17,7 +17,7 @@
   }
 }
 
-@media only screen and (min-width: 650px) {
+@media only screen and (min-width: 768px) {
   .sec-nav {
     display: none;
   }
@@ -164,7 +164,7 @@ winter:FDF0E0;
 .icon-desp {
   font-size: 30px;
 }
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 767px) {
   .desp {
     visibility: hidden;
     display: none;
