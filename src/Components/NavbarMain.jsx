@@ -59,14 +59,12 @@ const NavbarMain = () => {
                   aria-label="Search"
                   size="sm"
                 />
-                <Button className="mb-2" size="sm">
-                  <div className="icono-busqueda">
+                <button className="mb-2 icono-busqueda" size="sm">
                     <ion-icon
-                      className="icono-busqueda"
+                      className="fw-bold"
                       name="search-outline"
                     ></ion-icon>
-                  </div>
-                </Button>
+                </button>
               </Form>
             </Container>
             <Nav>

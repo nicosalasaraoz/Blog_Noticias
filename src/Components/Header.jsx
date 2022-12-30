@@ -10,6 +10,7 @@ import {
 import { Link } from "react-router-dom";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 import Desplegable from "./Desplegable";
+import Search from './Search';
 
 const Header = () => {
   return (
@@ -36,14 +37,10 @@ const Header = () => {
                     placeholder="Buscar..."
                     aria-label="Search"
                   />
-                  <Button>
-                    <div className="icono-busqueda ">
-                      <ion-icon
-                        className="icono-busqueda"
-                        name="search-outline"
-                      ></ion-icon>
-                    </div>
-                  </Button>
+                  <button className="icono-busqueda">
+                      <ion-icon className='' name="search-outline"></ion-icon>
+                    
+                  </button>
                 </Form>
               </small>
               <div className="d-flex align-items-around">
