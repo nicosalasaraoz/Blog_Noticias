@@ -17,7 +17,7 @@
   }
 }
 
-@media only screen and (min-width: 650px) {
+@media only screen and (min-width: 768px) {
   .sec-nav {
     display: none;
   }
@@ -37,6 +37,9 @@
 .icono-busqueda {
   color: rgb(255, 255, 255);
   font-size: 20px;
+  background-color: #1f1fe6;
+  border-color: antiquewhite;
+  border-radius: 5px;
 }
 
 .icono-login {
@@ -82,8 +85,8 @@
 .title {
   color: #fcfafb;
   font-size: 25px;
-  transform: translateY(-30%);
-  text-shadow: 2px 2px 2px rgb(202, 8, 8);
+  background-color: rgba(20, 18, 18, 0.852);
+  border-radius: 5px;
 }
 
 /*Paleta de colores
@@ -164,7 +167,7 @@ winter:FDF0E0;
 .icon-desp {
   font-size: 30px;
 }
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 767px) {
   .desp {
     visibility: hidden;
     display: none;
