@@ -1,7 +1,7 @@
 import React from "react";
 import {
   Carousel,
-  Button,
+  
   Container,
   Form,
   Nav,
@@ -32,6 +32,7 @@ const Header = () => {
             <Nav className="d-flex justify-content-around">
               <small>
                 <Form className="d-flex ocultar-busqueda">
+                  
                   <Form.Control
                     type="search"
                     placeholder="Buscar..."

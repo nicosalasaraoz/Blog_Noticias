@@ -9,6 +9,7 @@ import Main from "./Components/Main";
 import NavbarMain from "./Components/NavbarMain";
 import Footer from "./Components/Footer";
 import { Container } from "react-bootstrap";
+import Search from "./Components/Search";
 
 
 function App() {
@@ -114,6 +115,7 @@ content: "Año tras año, los premios L’Oréal-Unesco “Por las mujeres en la
             <Route exact path="/" element={<Main News={News} />} />
             <Route exact path="/paginacontacto" element={<PaginaContacto />} />
             <Route path="*" element={<Error404 />} />
+            <Route exact path="/" element={<Search />} />
             {/* <Route path="/ArticleDetail/:id"  element={<ArticleDetail News={News} />} /> */}
           </Routes >
           <Footer />

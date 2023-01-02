@@ -5,6 +5,15 @@ const [articles, setArticles] = useState([])
 const [search, setSearch] = useState('')
 
 
+const URL = 'https://fakestoreapi.com/products'
+
+const showData = async () => {
+    const response = await fetch(URL)
+    const data = await response.json()
+    console.log(data)
+}
+
+showData()
 
 
 
