@@ -12,10 +12,11 @@ import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 import Desplegable from "./Desplegable";
 import Search from './Search';
 
-const Header = () => {
+const Header = (search, searcher) => {
+
   return (
     <>
-    <Navbar bg="light" className="">
+    <Navbar bg="light" className="" sticky="top">
       <Container fluid >
         <div>
         <Desplegable />
@@ -30,20 +31,18 @@ const Header = () => {
         </div>
           <div className="">
             <Nav className="d-flex justify-content-around">
-              <small>
-                <Form className="d-flex ocultar-busqueda">
-                  
-                  <Form.Control
-                    type="search"
+              <div className="ocultar-busqueda">
+                <input className="form-control"
+                    type="text"
                     placeholder="Buscar..."
                     aria-label="Search"
-                  />
-                  <button className="icono-busqueda">
-                      <ion-icon className='' name="search-outline"></ion-icon>
                     
+                    value={search}
+                  />
+                  <button className="icono-busqueda"  onClick={searcher}>
+                      <ion-icon  className='' name="search-outline"></ion-icon>
                   </button>
-                </Form>
-              </small>
+                  </div>
               <div className="d-flex align-items-around">
                 <ul>
                   <li>
