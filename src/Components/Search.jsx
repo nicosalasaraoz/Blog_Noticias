@@ -16,6 +16,9 @@ const showData = async () => {
     setArticles(data)
 }
 
+const results = !search ? articles : articles.filter((dato)=> dato.name.toLowerCase().includes(search.toLocaleLowerCase))
+
+
 const searcher = (e) =>
     setSearch(e.target.value)
 
@@ -29,7 +32,7 @@ return (
     <>
         <Container>
         <Row xs={1} md={2} className="g-4">
-            {articles.map((article)=>
+            {results.map((article)=>
             <Card key={article.id} style={{ width: '10rem' }}>
                 <Card.Img variant="top" src={article.image} />
                 <Card.Body>
