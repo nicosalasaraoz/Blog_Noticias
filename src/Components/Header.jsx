@@ -1,17 +1,12 @@
 import React from "react";
-import {
-  Carousel,
-  Container,
-  Nav,
-  Navbar,
-} from "react-bootstrap";
+import { Carousel, Container, Nav,Navbar,} from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 import Desplegable from "./Desplegable";
-import Search from './Search';
+
 import { FaSistrix} from 'react-icons/fa';
 
-const Header = ({search, searcher}) => {
+const Header = (props) => {
 
   return (
     <>
@@ -33,9 +28,9 @@ const Header = ({search, searcher}) => {
               <div className="ocultar-busqueda input-wrapper">
                 <input className="form-control"
                     type="text"
-                    placeholder="Buscar..."
-                    value={search}
-                    onChange={searcher}
+                    placeholder="Buscar articulo..."
+                    value={props.search}
+                    onChange={props.searcher}
                   />
                   <FaSistrix className="input-icon"/>
               </div>
@@ -96,6 +91,8 @@ const Header = ({search, searcher}) => {
             </Carousel.Item>
           </Carousel>
         </div>
+        
+
       </Container>
     </>
   );

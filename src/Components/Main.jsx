@@ -4,6 +4,7 @@ import ArticleList from "./ArticleList";
 import Header from "./Header";  
 import Search from "./Search";
 
+
 const Main = ({ News }) => {
   return (
     <>
