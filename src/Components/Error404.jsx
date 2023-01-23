@@ -5,11 +5,9 @@ import { Link } from "react-router-dom";
 const Error404 = () => {
   return (
     <Container className="image-e">
-      <Button variant="danger" className="bt-volver">
-        <Link to="/" className="text-white" style={{ textDecoration: "none" }}>
+      <Link to="/" className="text-white" style={{ textDecoration: "none" }}><Button variant="danger" className="bt-volver">
           Back to Home
-        </Link>
-      </Button>
+      </Button></Link>
     </Container>
   );
 };

@@ -1,20 +1,15 @@
 import React from "react";
-import {
-  Carousel,
-  Button,
-  Container,
-  Form,
-  Nav,
-  Navbar,
-} from "react-bootstrap";
+import { Carousel, Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 import Desplegable from "./Desplegable";
 
-const Header = () => {
+import { FaSistrix } from "react-icons/fa";
+
+const Header = (props) => {
   return (
     <>
-      <Navbar bg="light" className="">
+      <Navbar bg="light" className="" sticky="top">
         <Container fluid>
           <div>
             <Desplegable />
@@ -29,23 +24,16 @@ const Header = () => {
           </div>
           <div className="">
             <Nav className="d-flex justify-content-around">
-              <small>
-                <Form className="d-flex ocultar-busqueda">
-                  <Form.Control
-                    type="search"
-                    placeholder="Buscar..."
-                    aria-label="Search"
-                  />
-                  <Button>
-                    <div className="icono-busqueda ">
-                      <ion-icon
-                        className="icono-busqueda"
-                        name="search-outline"
-                      ></ion-icon>
-                    </div>
-                  </Button>
-                </Form>
-              </small>
+              <div className="ocultar-busqueda input-wrapper">
+                <input
+                  className="form-control"
+                  type="text"
+                  placeholder="Buscar articulo..."
+                  value={props.search}
+                  onChange={props.searcher}
+                />
+                <FaSistrix className="input-icon" />
+              </div>
               <div className="d-flex align-items-around">
                 <ul>
                   <li>
