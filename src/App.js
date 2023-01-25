@@ -114,8 +114,8 @@ content: "Año tras año, los premios L’Oréal-Unesco “Por las mujeres en la
           <Routes>
             <Route exact path="/" element={<Main News={News} />} />
             <Route exact path="/paginacontacto" element={<PaginaContacto />} />
-            <Route path="*" element={<Error404 />} />
             <Route exact path="/search" element={<Search />} />
+            <Route path="*" element={<Error404 />} />
             {/* <Route path="/ArticleDetail/:id"  element={<ArticleDetail News={News} />} /> */}
           </Routes >
           <Footer />

@@ -5,11 +5,11 @@ import Header from "./Header";
 import Search from "./Search";
 
 
-const Main = ({ News }) => {
+const Main = ({ search }) => {
   return (
     <>
       <Header />
-      <ArticleList News={News} />
+      <ArticleList />
       <Search />
       {/* <ArticleDetail News={News} /> */}
       {/* <Articles /> */}

@@ -6,7 +6,8 @@ import Desplegable from "./Desplegable";
 
 import { FaSistrix} from 'react-icons/fa';
 
-const Header = (props) => {
+
+const Header = ({search,searcher}) => {
 
   return (
     <>
@@ -29,8 +30,8 @@ const Header = (props) => {
                 <input className="form-control"
                     type="text"
                     placeholder="Buscar articulo..."
-                    value={props.search}
-                    onChange={props.searcher}
+                    value={search}
+                    onChange={searcher}
                   />
                   <FaSistrix className="input-icon"/>
               </div>
@@ -91,9 +92,8 @@ const Header = (props) => {
             </Carousel.Item>
           </Carousel>
         </div>
-        
-
       </Container>
+      
     </>
   );
 };

@@ -25,29 +25,22 @@ const NavbarMain = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav>
               <div className="d-flex justify-content-center">
-                <Nav.Link className="text-dark mb-1 mx-2" href="#pricing">
-                  <div className="icono-call">
+                  <div className="icono-call text-dark mb-1 mx-2">
                     <Link
                       to="/paginacontacto"
                       className="text-white"
-                      style={{ textDecoration: "none" }}
-                    >
+                      style={{ textDecoration: "none" }}>
                       <ion-icon name="call"></ion-icon>
                     </Link>
                   </div>
-                </Nav.Link>
-
-                <Nav.Link className="text-dark mb-1 mx-2" href="#home">
-                  <div className="icono-home">
+                  <div className="icono-home  text-dark mb-1 mx-2">
                     <Link
                       to="/"
                       className="text-white"
-                      style={{ textDecoration: "none" }}
-                    >
+                      style={{ textDecoration: "none" }}>
                       <ion-icon name="home"></ion-icon>
                     </Link>
                   </div>
-                </Nav.Link>
               </div>
             </Nav>
             <Container>

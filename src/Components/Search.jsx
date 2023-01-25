@@ -19,8 +19,11 @@ const showData = async () => {
 const results = !search ? articles : articles.filter((dato)=> dato.name.toLowerCase().includes(search.toLocaleLowerCase))
 
 
-const searcher = (e) =>
+const searcher = (e) =>{
     setSearch(e.target.value)
+    console.log("probando", searcher)
+}
+
 
 useEffect( () => {
     showData()
@@ -30,6 +33,7 @@ useEffect( () => {
 
 return (
     <>
+       
         <Container>
         <Row xs={1} md={2} className="g-4">
             {results.map((article)=>
