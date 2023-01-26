@@ -1,6 +1,10 @@
 @import url("/src/css-reset/reset.css");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
 
+body{
+  margin: 0;
+}
+
 .bg-navbar {
   background: rgb(2, 0, 36);
   background: linear-gradient(

@@ -7,7 +7,8 @@ import Desplegable from "./Desplegable";
 import { FaSistrix } from "react-icons/fa";
 
 
-const Header = ({search,searcher}) => {
+const Header = (props) => {
+  console.log('props', props)
   return (
     <>
       <Navbar bg="light" className="" sticky="top">
@@ -30,8 +31,8 @@ const Header = ({search,searcher}) => {
                   className="form-control"
                   type="text"
                   placeholder="Buscar articulo..."
-                  value={search}
-                  onChange={searcher}
+                  value={props.search}
+                  onChange={(e)=> props.setSearchState(e.target.value)}
                 />
                 <FaSistrix className="input-icon" />
               </div>

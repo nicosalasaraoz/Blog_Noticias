@@ -1,16 +1,19 @@
 import React from "react";
+import { useState } from "react";
 import ArticleList from "./ArticleList";
 // import ArticleDetail from "./ArticleDetail";
 import Header from "./Header";  
 import Search from "./Search";
 
 
-const Main = ({ search }) => {
+const Main = ({ News}) => {
+  const [searchState, setSearchState] = useState('');
+  console.log('searchState', searchState)
   return (
     <>
-      <Header />
+      <Header setSearchState={setSearchState}/>
       <ArticleList />
-      <Search />
+      <Search setSearchState={searchState}/>
       {/* <ArticleDetail News={News} /> */}
       {/* <Articles /> */}
     </>
