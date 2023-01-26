@@ -13,7 +13,7 @@ const ModalRegistro = ({ registro, handleCerrar }) => {
   const handleSubmitBack = (e) => {
     e.preventDefault();
 
-    fetch("http://localhost:3002/user/register", {
+    fetch("https://grupo-3-news-back-end-1ct2.vercel.app/user/register", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
