@@ -1,58 +1,51 @@
-import React,{useState, useEffect} from 'react'
-import { Button, Card, Container, Row } from 'react-bootstrap'
+import React, { useState, useEffect } from "react";
+import { Button, Card, Container, Row } from "react-bootstrap";
 
+const Search = () => {
+  const [articles, setArticles] = useState([]);
+  const [search, setSearch] = useState("");
 
-const Search  = () => {
-const [articles, setArticles] = useState([])
-const [search, setSearch] = useState('')
+  // Cambiar URL por na de Noticias desde base de datos
+  const URL = "https://fakestoreapi.com/products";
 
-// Cambiar URL por na de Noticias desde base de datos
-const URL = 'https://fakestoreapi.com/products'
+  const showData = async () => {
+    const response = await fetch(URL);
+    const data = await response.json();
 
-const showData = async () => {
-    const response = await fetch(URL)
-    const data = await response.json()
-    
-    setArticles(data)
-}
+    setArticles(data);
+  };
 
-const results = !search ? articles : articles.filter((dato)=> dato.name.toLowerCase().includes(search.toLocaleLowerCase))
+  const results = !search
+    ? articles
+    : articles.filter((dato) =>
+        dato.name.toLowerCase().includes(search.toLocaleLowerCase)
+      );
 
+  const searcher = (e) => setSearch(e.target.value);
 
-const searcher = (e) =>{
-    setSearch(e.target.value)
-    console.log("probando", searcher)
-}
+  useEffect(() => {
+    showData();
+  }, []);
 
-
-useEffect( () => {
-    showData()
-}, [])
-
-
-
-return (
+  return (
     <>
-       
-        <Container>
+      <Container>
         <Row xs={1} md={2} className="g-4">
-            {results.map((article)=>
-            <Card key={article.id} style={{ width: '10rem' }}>
-                <Card.Img variant="top" src={article.image} />
-                <Card.Body>
+          {results.map((article) => (
+            <Card key={article.id} style={{ width: "10rem" }}>
+              <Card.Img variant="top" src={article.image} />
+              <Card.Body>
                 <Card.Title>{article.title}</Card.Title>
-                <Card.Text>
-                    {article.description}
-                </Card.Text>
+                <Card.Text>{article.description}</Card.Text>
                 <Button variant="primary">leer más..</Button>
-                <Card.Body/>
-            </Card.Body>
+                <Card.Body />
+              </Card.Body>
             </Card>
-            )}
+          ))}
         </Row>
-        </Container>
+      </Container>
     </>
-)
-}
+  );
+};
 
 export default Search;

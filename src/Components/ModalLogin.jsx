@@ -11,7 +11,7 @@ const ModalLogin = ({ show, handleClose }) => {
   const handleSubmitBack = (e) => {
     e.preventDefault();
 
-    fetch("http://localhost:3002/user/login", {
+    fetch("https://grupo-3-news-back-end-1ct2.vercel.app/user/login", {
       method: "POST",
       headers: {
         "Content-type": "application/json",

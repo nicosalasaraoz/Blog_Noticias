@@ -34,12 +34,12 @@
   border-color: black;
 }
 
-.input-wrapper{
+.input-wrapper {
   position: relative;
   width: 230px;
 }
 
-.input-icon{
+.input-icon {
   color: #b31501;
   position: absolute;
   width: 20px;
