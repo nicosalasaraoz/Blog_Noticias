@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Button, Container, Form, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import ModalLogin from "./ModalLogin";
-import ModalRegistro from "./ModalRegistro";
+import ModalLogin from "../views/ModalLogin";
+import ModalRegistro from "../views/ModalRegistro";
 
 const NavbarMain = () => {
   const [show, setShow] = useState(false);

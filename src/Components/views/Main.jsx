@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import ArticleList from "./ArticleList";
+import ArticleList from "../views/news/ArticleList";
 // import ArticleDetail from "./ArticleDetail";
 import Header from "./Header";  
 import Search from "./Search";
