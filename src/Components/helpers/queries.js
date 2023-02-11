@@ -1,41 +1,34 @@
-// import {React, useState, useEffect,} from 'react';
-// import ProductDetail from './ProductDetail';
-// import { useParams } from 'react-router-dom';
+//peticion GET para obtener todos los productos
+//peticion POST crear un nuevo producto, en los login tambien lo puedo usar
+//peticion PUT sirve para modificar un producto
+//peticion DELETE sirve para borrar un producto
 
-// const ProductDetailContainer = ({ add }) => {
-//   const params = useParams();
+const URL = process.env.REACT_APP_API_NEWS;
 
-//   const [data, setData] = useState([]);
-//   useEffect(() => {
-//     fetch(
-//       `https://fakestoreapi.com/products/${params.id}`
-//     )
-//       .then(res => res.json())
-//       .then(json => setData(json));
-//   }, []);
-//   return <ProductDetail data={data} add={add} />;
-// };
+export const consultarAPI = async()=>{
+    try{
+        // console.log(URL)
+        const respuesta = await fetch(URL);
+        const listaProductos = await respuesta.json()
+        console.log(listaProductos)
+        return listaProductos;
+    }catch(error){
+        console.log(error)
+        return false;
+    }
+}
 
-// export default ProductDetailContainer;
-
-// import React, {useEffect, useState} from 'react';
-
-// const ArticleListContainer = () => {
-    
-// //   const [data, setData] = useState([]);
-// //   useEffect(() => {
-// //     fetch('https://fakestoreapi.com/products')
-// //       .then(res => res.json())
-// //       .then(json => setData(json));
-// //     console.log(data);
-// //   }, []);
-//   return (
-//     // <>
-//     //   {/* <Landing /> */}
-//     //   {/* <ArticleDetail News = {News}  /> */}
-//     //   {/* <ArticleList News={News} /> */}
-//     // </>
-//   );
-// };
-
-// export default ArticleListContainer;
+export const obtenerProductoAPI = async(id)=>{
+    try{
+        // console.log(URL)
+        const respuesta = await fetch(URL+'/'+id);
+        const art ={
+            dato: await respuesta.json(),
+            status: respuesta.status
+        }
+     return art;
+    }catch(error){
+        console.log(error)
+        return false;
+    }
+}
