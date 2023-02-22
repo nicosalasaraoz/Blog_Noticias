@@ -12,18 +12,16 @@ const Main = ({ News}) => {
   return (
     <>
       <Header setSearchState={setSearchState}/>
-      <Articles />
-      <Search setSearchState={searchState}/>
-      <Container className="mainSection">
+      <Container>
       <h1 className="display-3 text-center">Bienvenidos</h1>
       <hr />
-      <Row xs={1} md={4}>
-        {/* aqui van las columnas */}
+      <Row xs={2} md={4} lg={5} className="my-2 ">
         {
-            News.map((New)=> <Articles key={New.id} New={New}></Articles>)            
+            News.map((Art)=> <Articles key={Art.id} Art={Art}></Articles>)            
         }
       </Row>
     </Container>
+    <Search setSearchState={searchState}/>
     </>
   );
 };

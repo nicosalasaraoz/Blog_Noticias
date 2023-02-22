@@ -1,9 +1,9 @@
-import { Container, Card} from 'react-bootstrap';
+import { Container, CardGroup, Card} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { BiLike } from 'react-icons/bi';
 
-const Articles = ({ New }) => {
-    const {id, title, url} = {...New}
+const Articles = ({ Art }) => {
+    const {id, title, url} = {...Art}
     // const [productos, setProductos] = useState([]);
 
     // useEffect(()=>{
@@ -14,13 +14,13 @@ const Articles = ({ New }) => {
        
     // },[])
               return (
-                <Container>
-                    <Card className="p-0 my-2">
+                  <Container >
+                    <CardGroup>
                     <Card.Img variant="top" src={url} className="p-1" />
-                    <Card.Body style={{ height: '9rem' }}>
+                    <Card.Body>
                         <Card.Text>{title}</Card.Text>
                     </Card.Body>
-                    <Card.Footer className="d-flex justify-content-between">
+                    <Card.Footer className="mt-auto d-flex justify-content-between">
                         <Link className="btn btn-primary" to={`/ArticleDetail/${id}`}>
                         Ir al articulo
                         </Link>
@@ -28,7 +28,7 @@ const Articles = ({ New }) => {
                             <BiLike />
                         </Link>                     
                     </Card.Footer>
-                    </Card>
+                    </CardGroup>
                  </Container>
             );
         }
