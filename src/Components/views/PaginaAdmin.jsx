@@ -3,6 +3,7 @@ import { Container, Button } from "react-bootstrap";
 import Table from "react-bootstrap/Table";
 
 function TablaUsuario() {
+  
   const Usuarios = [
     {
       id: 1,

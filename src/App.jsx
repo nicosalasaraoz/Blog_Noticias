@@ -10,6 +10,10 @@ import Footer from "./Components/common/Footer"
 import Search from "./Components/views/Search";
 //import Main from "./Components/Main";
 import ArticleDetail from "./Components/views/news/ArticleDetail";
+import Administrador from "./Components/views/news/Administrador";
+
+
+
 const News = [
     {
       "id": 1,
@@ -145,6 +149,15 @@ function App() {
             <Route exact path="/search" element={<Search />} />
             <Route path="*" element={<Error404 />} />
             <Route path="/ArticleDetail/:id"  element={<ArticleDetail/>} />
+            <Route exact path="/administrar" element={<Administrador />} />
+            {/* <Route
+                    path="/administrar/*"
+                    element={
+                        <RutasProtegidas>
+                            <RutasAdmin></RutasAdmin>
+                        </RutasProtegidas>
+                    }
+                /> */}
           </Routes >
           <Footer />
       </Container>
