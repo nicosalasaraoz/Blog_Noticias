@@ -8,14 +8,48 @@ import NavbarMain from "./Components/common/NavbarMain";
 import Error404 from "./Components/common/Error404";
 import Footer from "./Components/common/Footer"
 import Search from "./Components/views/Search";
-//import Main from "./Components/Main";
-import ArticleDetail from "./Components/views/news/ArticleDetail";
 import Administrador from "./Components/views/news/Administrador";
+import ArticleDetail from "./Components/views/news/ArticleDetail";
+import CrearNews from "./Components/views/news/CrearNews";
+import EditarNews from "./Components/views/news/EditarNews";
+
+function App() {
+  
+  return (
+<BrowserRouter>
+      <Container fluid className="d-flex flex-column min-vh-100 px-0">
+        <NavbarMain />
+          <Routes>
+            <Route exact path="/" element={<Main News={News} />} />
+            <Route exact path="/paginacontacto" element={<PaginaContacto />} />
+            <Route exact path="/search" element={<Search />} />
+            <Route path="*" element={<Error404 />} />
+            <Route exact path="/administrar" element={<Administrador />} />
+            <Route path="/ArticleDetail/:id"  element={<ArticleDetail/>} />
+            <Route exact path="/administrar/crear" element={<CrearNews />} />
+            <Route exact path="/administrar/editar/:id" element={<EditarNews />} />
+            {/* <Route
+                    path="/administrar/*"
+                    element={
+                        <RutasProtegidas>
+                            <RutasAdmin/>
+                        </RutasProtegidas>
+                    }
+                /> */}
+          </Routes >
+          <Footer />
+      </Container>
+</BrowserRouter>
+  );
+}
+export default App;
+
+
 
 
 
 const News = [
-    {
+  {
       "id": 1,
       "category": "Sports",
       "title": "Arrancó el Mundial y con una ceremonia impactante se levantó el telón de Qatar 2022",
@@ -136,32 +170,3 @@ const News = [
       "content": "Año tras año, los premios LOréal-Unesco “Por las mujeres en las ciencias” reconocen, junto con el Conicet, la importancia de reivindicar la labor, muchas veces silenciosa, de infinidad de científicas en contextos en los que la brecha de género persiste. “El mundo necesita ciencia, y la ciencia necesita mujeres”, alertan quienes impulsan esta iniciativa a nivel mundial en su reclamo de mayor visibilidad. Las mujeres de la ciencia trabajan duro para modificar añosas reglas que las perjudican. Solo el 33% de los protagonistas de investigación y desarrollo (I+D) del mundo son mujeres, revelan los informes de Unesco. Aún hoy, muchos hombres firman trabajos realizados por sus colegas mujeres supuestamente para darles mayor credibilidad: un fenómeno de quita de visibilidad de la tarea femenina que se conoce con el nombre de efecto Matilda. Por otra parte, que solo 4% de las mujeres hayan sido destacadas con el Premio Nobel constituye otro elocuente ejemplo de ese techo de cristal que limita su lucimiento. En la 16ª edición del referido premio, realizada el 14 del corriente mes, seis científicas argentinas recibieron su reconocimiento. Los estímulos económicos constan de un apoyo monetario para seguir desarrollando sus labores. La ganadora fue la doctora Carla Eugenia Giacomelli, investigadora principal en Córdoba del Instituto de Investigaciones en Fisicoquímica de esa provincia (Infiqc); (Conicet-UNC). Apasionada desde joven por la química, su proyecto actual apunta a diseñar biomateriales que estimulen la regeneración ósea a partir de la modulación de la expresión génica. La doctora Guillermina Amica, del Centro Atómico Bariloche, ganó en la categoría Beca. Por fuera de sus aportes en la generación de gas natural sintético, destacó que la Comisión Nacional de Energía Atómica le permitió congeniar la maternidad con la profesión, otro de los aspectos que muchas veces desplazan de los primeros lugares a las mujeres. Las menciones especiales fueron para las doctoras Lucía M. Fama, Liliana V. Mogni, Lucía Asaro y Noelia DElía. Promover la igualdad en el terreno de la investigación científica es asignar a las mujeres el protagonismo que por años se les viene retaceando. Es hora de cambiar las reglas."
     }
   ]
-
-function App() {
-  
-  return (
-<BrowserRouter>
-      <Container fluid className="d-flex flex-column min-vh-100 px-0">
-        <NavbarMain />
-          <Routes>
-            <Route exact path="/" element={<Main News={News} />} />
-            <Route exact path="/paginacontacto" element={<PaginaContacto />} />
-            <Route exact path="/search" element={<Search />} />
-            <Route path="*" element={<Error404 />} />
-            <Route path="/ArticleDetail/:id"  element={<ArticleDetail/>} />
-            <Route exact path="/administrar" element={<Administrador />} />
-            {/* <Route
-                    path="/administrar/*"
-                    element={
-                        <RutasProtegidas>
-                            <RutasAdmin></RutasAdmin>
-                        </RutasProtegidas>
-                    }
-                /> */}
-          </Routes >
-          <Footer />
-      </Container>
-</BrowserRouter>
-  );
-}
-export default App;

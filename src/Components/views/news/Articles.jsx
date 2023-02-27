@@ -14,7 +14,7 @@ const Articles = ({ Art }) => {
        
     // },[])
               return (
-                  <Container >
+                  <Container>
                     <CardGroup>
                     <Card.Img variant="top" src={url} className="p-1" />
                     <Card.Body>
