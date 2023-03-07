@@ -8,10 +8,10 @@ import NavbarMain from "./Components/common/NavbarMain";
 import Error404 from "./Components/common/Error404";
 import Footer from "./Components/common/Footer"
 import Search from "./Components/views/Search";
-import Administrador from "./Components/views/news/Administrador";
 import ArticleDetail from "./Components/views/news/ArticleDetail";
-import CrearNews from "./Components/views/news/CrearNews";
-import EditarNews from "./Components/views/news/EditarNews";
+import Administrador from "./Components/views/admin/Administrador";
+import CrearNews from "./Components/views/admin/CrearNews";
+import EditarNews from "./Components/views/admin/EditarNews";
 
 function App() {
   
@@ -24,8 +24,8 @@ function App() {
             <Route exact path="/paginacontacto" element={<PaginaContacto />} />
             {/* <Route exact path="/search" element={<Search />} /> */}
             <Route path="*" element={<Error404 />} />
-            <Route exact path="/administrar" element={<Administrador />} />
             <Route path="/ArticleDetail/:id"  element={<ArticleDetail/>} />
+            <Route exact path="/administrar" element={<Administrador />} />
             <Route exact path="/administrar/crear" element={<CrearNews />} />
             <Route exact path="/administrar/editar/:id" element={<EditarNews />} />
             {/* <Route path="/search=:resultado" element={<Search Artdb={Artdb} />} />*/}
