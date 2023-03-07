@@ -6,7 +6,7 @@ import ModalRegistro from "../views/ModalRegistro";
 
 const NavbarMain = () => {
   const [show, setShow] = useState(false);
-
+  const [search, setSearch] = useState("");
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
@@ -51,13 +51,12 @@ const NavbarMain = () => {
                   className="me-2 mb-2"
                   aria-label="Search"
                   size="sm"
+                  // value={search}
+                  // onChange={(e) => setSearch(e.target.value)}
                 />
-                <button className="mb-2 icono-busqueda" size="sm">
-                    <ion-icon
-                      className="fw-bold"
-                      name="search-outline"
-                    ></ion-icon>
-                </button>
+                {/* <Link to={`/search=${search}`}> */}
+                  {/* <FontAwesomeIcon icon={faMagnifyingGlass} /> */}
+                {/* </Link> */}
               </Form>
             </Container>
             <Nav>

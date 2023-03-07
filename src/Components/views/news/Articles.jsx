@@ -14,20 +14,20 @@ const Articles = ({ Art }) => {
        
     // },[])
               return (
-                  <Container>
+                  <Container className="d-flex">
                     <CardGroup>
                     <Card.Img variant="top" src={url} className="p-1" />
                     <Card.Body>
                         <Card.Text>{title}</Card.Text>
                     </Card.Body>
-                    <Card.Footer className="mt-auto d-flex justify-content-between">
+                    <Container className="mt-auto d-flex justify-content-between mx-0">
                         <Link className="btn btn-primary" to={`/ArticleDetail/${id}`}>
                         Ir al articulo
                         </Link>
-                        <Link to="/error404" className=" btn btn-primary text-center text-white m-0">
+                        <Link to="/error404" className=" btn btn-primary text-center text-white">
                             <BiLike />
-                        </Link>                     
-                    </Card.Footer>
+                        </Link>
+                    </Container>
                     </CardGroup>
                  </Container>
             );

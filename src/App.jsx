@@ -28,8 +28,9 @@ function App() {
             <Route path="/ArticleDetail/:id"  element={<ArticleDetail/>} />
             <Route exact path="/administrar/crear" element={<CrearNews />} />
             <Route exact path="/administrar/editar/:id" element={<EditarNews />} />
-            {/* <Route
-                    path="/administrar/*"
+            {/* <Route path="/search=:resultado" element={<Search Artdb={Artdb} />} */}
+          />
+            {/* <Route path="/administrar/*"
                     element={
                         <RutasProtegidas>
                             <RutasAdmin/>
