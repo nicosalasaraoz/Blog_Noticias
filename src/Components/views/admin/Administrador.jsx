@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { consultarAPI } from "../../helpers/queries";
 import ItemNews from "./ItemNews";
 
-const Administrador = () => {
+const Administrador = ({News}) => {
     const [noticias, setNoticias] = useState([]);
 
     useEffect(()=>{
@@ -28,17 +28,18 @@ const Administrador = () => {
       <Table responsive striped bordered hover size="sm">
         <thead>
           <tr>
-            <th>Cod</th>
-            <th>Producto</th>
-            <th>Precio</th>
-            <th>URL de imagen</th>
-            <th>Cat</th>
+            <th>id</th>
+            <th>category</th>
+            <th>title</th>
+            <th>description</th>
+            <th>url</th>
+            <th>content</th>
             <th></th>
           </tr>
         </thead>
         <tbody>
             {
-                noticias.map((noticias)=><ItemNews key={noticias._id} noticias={noticias} setNoticias={setNoticias}/>)
+                News.map((noticias)=><ItemNews key={noticias._id} noticias={noticias} setNoticias={setNoticias}/>)
             }
         </tbody>
       </Table>

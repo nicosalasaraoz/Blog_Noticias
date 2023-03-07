@@ -1,21 +1,21 @@
-import { Button } from "react-bootstrap";
+import { Button, Container } from "react-bootstrap";
 import {Link} from 'react-router-dom'
 import { borrarProductoAPI, consultarAPI } from "../../helpers/queries";
 import Swal from "sweetalert2";
 
-const ItemProducto = ({producto, setProductos}) => {
-    const {_id, nombreProducto, precio, imagen, categoria } = {...producto}
+const ItemNews = ({noticias, setNoticias}) => {
+    const {id, category, title, description, url, content } = {...noticias}
 
     const borrarProducto = ()=>{
         // TAREA: agregar con SWAL una ventana que pregunte al usuario si desea eliminar el producto
         // si presiona que si entonces hago el siguiente
-        borrarProductoAPI(_id).then((respuesta)=>{
+        borrarProductoAPI(id).then((respuesta)=>{
             if(respuesta.status === 200){
                 Swal.fire('Producto eliminado', 'El producto fue correctamente eliminado','success');
                 //busco todos los productos existentes en ese instante de tiempo
                 consultarAPI().then((respuesta)=>{
                     //actualizo el state de productos de Administrador con los datos que hay en la api
-                    setProductos(respuesta);
+                    setNoticias(respuesta);
                 })
             }else{
                 Swal.fire('Ocurrio un error', 'Intente esta operacion en unos minutos','error');
@@ -24,16 +24,16 @@ const ItemProducto = ({producto, setProductos}) => {
     }
 
     return (
-        <>
-            <tr>
-                {/* <td>{producto._id}</td> */}
-                <td>{_id}</td>
-                <td>{nombreProducto}</td>
-                <td>${precio}</td>
-                <td>{imagen}</td>
-                <td>{categoria}</td>
+       <>
+            <tr style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                <td >{id}</td>
+                <td>{category}</td>
+                <td>{title}</td>
+                <td>{description}</td>
+                <td>{url}</td>
+                <td>{content}</td>
                 <td className="text-center">
-                    <Link className='btn btn-outline-warning me-1' to={`/administrar/editar/${_id}`}>
+                    <Link className='btn btn-outline-warning me-1' to={`/administrar/editar/${id}`}>
                         <i className="bi bi-arrow-clockwise text-warning"></i>
                     </Link>
                     <Button variant="outline-danger" onClick={borrarProducto}>
@@ -45,4 +45,4 @@ const ItemProducto = ({producto, setProductos}) => {
     );
 };
 
-export default ItemProducto;
+export default ItemNews;
