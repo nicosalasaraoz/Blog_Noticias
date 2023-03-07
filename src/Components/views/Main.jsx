@@ -8,7 +8,6 @@ import Search from "./Search";
 
 const Main = ({ News}) => {
   const [searchState, setSearchState] = useState('');
-  console.log('searchState', searchState)
   return (
     <>
       <Header setSearchState={setSearchState}/>
@@ -21,7 +20,7 @@ const Main = ({ News}) => {
         }
       </Row>
     </Container>
-    <Search setSearchState={searchState}/>
+    {/* <Search setSearchState={searchState}/> */}
     </>
   );
 };

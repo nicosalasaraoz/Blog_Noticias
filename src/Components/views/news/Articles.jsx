@@ -20,7 +20,7 @@ const Articles = ({ Art }) => {
                     <Card.Body>
                         <Card.Text>{title}</Card.Text>
                     </Card.Body>
-                    <Container className="mt-auto d-flex justify-content-between mx-0">
+                    <Container className="mt-auto d-flex justify-content-between p-0 my-1">
                         <Link className="btn btn-primary" to={`/ArticleDetail/${id}`}>
                         Ir al articulo
                         </Link>
