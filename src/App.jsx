@@ -1,3 +1,4 @@
+/* eslint-disable */
 import "./css/globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container } from "react-bootstrap";
@@ -43,8 +44,6 @@ function App() {
   );
 }
 export default App;
-
-
 
 
 

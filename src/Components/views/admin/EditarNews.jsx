@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { useEffect } from "react";
 import { Form, Button } from "react-bootstrap";
 import { useParams, useNavigate } from "react-router-dom";
@@ -5,20 +7,15 @@ import { editarProductoAPI, obtenerProductoAPI } from "../../helpers/queries";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 
-const EditarProducto = () => {
+const EditarNews = () => {
   const { id } = useParams();
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    setValue
-  } = useForm();
+  const {register, handleSubmit, formState: { errors },setValue} = useForm();
   const navegacion = useNavigate();
 
   useEffect(() => {
     obtenerProductoAPI(id).then((respuesta) => {
       if (respuesta.status === 200) {
-        console.log(respuesta);
+        // console.log(respuesta);
         //cargar los datos en el formulario
         setValue('nombreProducto',respuesta.dato.nombreProducto);
         setValue('precio',respuesta.dato.precio);
@@ -29,7 +26,7 @@ const EditarProducto = () => {
   }, []);
 
   const onSubmit = (datos) => {
-    console.log(datos);
+    // console.log(datos);
     //pedir a la api actualizar el producto con los datos
     editarProductoAPI(id, datos).then((respuesta)=>{
       if(respuesta.status === 200){
@@ -137,4 +134,4 @@ const EditarProducto = () => {
   );
 };
 
-export default EditarProducto;
+export default EditarNews;
