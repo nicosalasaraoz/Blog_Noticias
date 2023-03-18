@@ -4,12 +4,12 @@ import { BiLike } from 'react-icons/bi';
 
 const Articles = ({ Art }) => {
     const {id, title, url} = {...Art}
-    // const [productos, setProductos] = useState([]);
+    // const [Art, setArt] = useState([]);
 
     // useEffect(()=>{
     //    consultarAPI().then((respuesta)=>{
     //     // console.log(respuesta)
-    //     setProductos(respuesta);
+    //     setArt(respuesta);
     //    })
        
     // },[])
