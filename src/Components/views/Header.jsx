@@ -1,5 +1,5 @@
 import React from "react";
-import { Carousel, Container, Nav, Navbar } from "react-bootstrap";
+import { Carousel, Container, Nav, Navbar, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 import Desplegable from "./Desplegable";
@@ -7,8 +7,9 @@ import Desplegable from "./Desplegable";
 import { FaSistrix } from "react-icons/fa";
 
 
-const Header = (props) => {
-  console.log('props', props)
+const Header = ({search, setSearch}) => {
+  
+
   return (
     <>
       <Navbar bg="light" className="" sticky="top">
@@ -27,15 +28,20 @@ const Header = (props) => {
           <div className="">
             <Nav className="d-flex justify-content-around">
               <div className="ocultar-busqueda input-wrapper">
-                <input
-                  className="form-control"
+              <Form>
+              <Form.Group>
+                <Form.Control
                   type="text"
-                  placeholder="Buscar articulo..."
-                  value={props.search}
-                  onChange={(e)=> props.setSearchState(e.target.value)}
+                  placeholder="Buscar articulo"
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
                 />
-                <FaSistrix className="input-icon" />
-              </div>
+              </Form.Group>
+              <Link to={`/search=${search}`}>
+              <FaSistrix className="input-icon" onClick={() => setSearch("")}/>
+              </Link>
+            </Form>
+          </div>
               <div className="d-flex align-items-around">
                 <ul>
                   <li>

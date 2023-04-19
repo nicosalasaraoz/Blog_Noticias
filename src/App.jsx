@@ -7,10 +7,11 @@ import PaginaContacto from "./Components/views/PaginaContacto";
 import NavbarMain from "./Components/common/NavbarMain";
 import Error404 from "./Components/common/Error404";
 import Footer from "./Components/common/Footer"
-import Search from "./Components/views/Search";
+
 //import Main from "./Components/Main";
 import ArticleDetail from "./Components/views/news/ArticleDetail";
 import Administrador from "./Components/views/news/Administrador";
+import SearchResult from "./Components/views/SearchResult";
 
 
 
@@ -137,7 +138,7 @@ const News = [
     }
   ]
 
-function App() {
+function App({placesDb}) {
   
   return (
 <BrowserRouter>
@@ -146,7 +147,7 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Main News={News} />} />
             <Route exact path="/paginacontacto" element={<PaginaContacto />} />
-            <Route exact path="/search" element={<Search />} />
+            <Route path="/search=:resultado" element={<SearchResult placesDb={placesDb} />} /> 
             <Route path="*" element={<Error404 />} />
             <Route path="/ArticleDetail/:id"  element={<ArticleDetail/>} />
             <Route exact path="/administrar" element={<Administrador />} />
