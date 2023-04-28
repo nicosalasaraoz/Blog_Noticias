@@ -11,7 +11,6 @@ const ArticleDetail = () => {
     useEffect(() => {
         obtenerProductoAPI(id).then((respuesta) => {
           if (respuesta.status === 200) {
-            console.log(respuesta);
             //cargar los datos 
             setArt(respuesta)
           }
