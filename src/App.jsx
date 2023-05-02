@@ -25,12 +25,12 @@ function App() {
             <Route exact path="/PaginaContacto" element={<PaginaContacto />} />
             <Route path="*" element={<Error404 />} />
             <Route path="/ArticleDetail/:id"  element={<ArticleDetail/>} />
-            <Route exact path="/administrar" element={<Administrador News={News} />} />
-            <Route exact path="/administrar/crear" element={<CrearNews />} />
-            <Route exact path="/administrar/editar/:id" element={<EditarNews />} />
+            <Route exact path="/Administrar" element={<Administrador News={News} />} />
+            <Route exact path="/Administrar/crear" element={<CrearNews />} />
+            <Route exact path="/Administrar/editar/:id" element={<EditarNews />} />
             {/* <Route exact path="/search" element={<Search />} /> */}
             {/* <Route path="/search=:resultado" element={<Search Artdb={Artdb} />} />*/}
-            {/* <Route path="/administrar/*"
+            {/* <Route path="/Administrar/*"
                     element={
                         <RutasProtegidas>
                             <RutasAdmin/>

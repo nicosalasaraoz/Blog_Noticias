@@ -27,7 +27,7 @@ const NavbarMain = () => {
               <div className="d-flex justify-content-center">
                   <div className="icono-call text-dark mb-1 mx-2">
                     <Link
-                      to="/paginacontacto"
+                      to="/PaginaContacto"
                       className="text-white"
                       style={{ textDecoration: "none" }}>
                       <ion-icon name="call"></ion-icon>

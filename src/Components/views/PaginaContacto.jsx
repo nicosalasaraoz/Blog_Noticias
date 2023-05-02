@@ -156,7 +156,7 @@ const PaginaContacto = () => {
                 <div className="d-flex justify-content-center">
                   <input
                     type={"submit"}
-                    value="Registrarme"
+                    value="Enviar"
                     className={"btn btn-secondary w-60 my-2"}
                   />
                 </div>

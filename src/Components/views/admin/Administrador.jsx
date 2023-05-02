@@ -31,7 +31,6 @@ const Administrador = ({News}) => {
             <th>id</th>
             <th>category</th>
             <th>title</th>
-            <th>description</th>
             <th>url</th>
             <th>content</th>
             <th></th>
