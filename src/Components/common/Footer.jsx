@@ -93,12 +93,12 @@ const Footer = () => {
                 </li>
                 <li className="mt-3 text-center">
                   <Link
-                    to="/paginacontacto"
+                    to="/PaginaContacto"
                     className="text-white fw-bold"
                     style={{ textDecoration: "none" }}
                   >
                     Contáctenos
-                  </Link>
+                    </Link>
                 </li>
               </ul>
             </nav>
