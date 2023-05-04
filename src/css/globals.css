@@ -256,11 +256,12 @@ winter:FDF0E0;
 .bt-volver {
   position: relative;
   top: 90%;
+  
   align-items: center;
   text-align: center;
   cursor: pointer;
   height: 40px;
-  width: 10%;
+  width: 30%;
 }
 
 .image-e {
@@ -279,6 +280,7 @@ winter:FDF0E0;
   .bt-volver {
     position: relative;
     top: 70%;
+    width: 100%;
   }
 }
 
