@@ -11,7 +11,7 @@ const Header = (props) => {
   console.log('props', props)
   return (
     <>
-      <Navbar bg="light" className="" sticky="top">
+      <Navbar bg="dark" className="" sticky="top">
         <Container fluid>
           <div>
             <Desplegable />
@@ -24,8 +24,8 @@ const Header = (props) => {
               />
             </Navbar.Brand>
           </div>
-          <div className="">
-            <Nav className="d-flex justify-content-around">
+        
+        <div className="SearchBar"> 
               <div className="ocultar-busqueda input-wrapper">
                 <input
                   className="form-control"
@@ -34,34 +34,38 @@ const Header = (props) => {
                   value={props.search}
                   onChange={(e)=> props.setSearchState(e.target.value)}
                 />
-                <FaSistrix className="input-icon" />
-              </div>
-              <div className="d-flex align-items-around">
-                <ul>
+                </div>
+                <Link className="SearchIcon ocultar-busqueda">
+                <FaSistrix className="d-flex" />
+                </Link>
+        
+                </div>
+
+              <div className="d-flex ">
+                <ul className="SocialHeader">
                   <li>
                     <Link
                       to="/error404"
-                      className="icono-header text-center m-2"
+                      className=""
                     >
-                      <FaFacebookF />
+                      <FaFacebookF/>
                     </Link>
                     <Link
                       to="/error404"
-                      className="icono-header text-center m-2"
+                      className=""
                     >
                       <FaTwitter />
                     </Link>
                     <Link
                       to="/error404"
-                      className="icono-header text-center m-2"
+                      className=""
                     >
                       <FaInstagram />
                     </Link>
                   </li>
                 </ul>
               </div>
-            </Nav>
-          </div>
+          
         </Container>
       </Navbar>
       <Container>

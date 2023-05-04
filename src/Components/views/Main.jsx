@@ -12,13 +12,13 @@ const Main = ({ News}) => {
     <>
       <Header setSearchState={setSearchState}/>
       <Container>
-      <h1 className="display-3 text-center">Bienvenidos</h1>
+      <h1 className="display-3 py-3 text-center">Bienvenidos</h1>
       <hr />
-      <Row xs={2} md={4} lg={5} className="my-2 ">
+      <div className="cards">
         {
             News.map((Art)=> <Articles key={Art.id} Art={Art}></Articles>)            
         }
-      </Row>
+      </div>
     </Container>
     {/* <Search setSearchState={searchState}/> */}
     </>
