@@ -73,7 +73,6 @@ const NavbarMain = () => {
                 </p>
               </Button>
               <Button
-                variant="danger"
                 className="d-flex align-items-center justify-content-center mx-1 mb-2 btn-nav"
                 onClick={handleShow}
               >

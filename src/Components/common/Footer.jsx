@@ -1,14 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+import "../../css/globals.css";
 
 const Footer = () => {
   return (
     <>
-      <div className="mt-auto ">
-        <footer className=" bg-footer py-4 text-white pb-0">
-          <div className="container">
-            <nav className="row">
+      <div className="mt-auto">
+        <footer className=" bg-footer py-5 text-white">
+          <div className="container py-5">
+            <nav className="row ">
               <Link
                 to="/"
                 className="col-12 col-md-4 col-lg-3 d-flex aling-items-center justify-content-center"
@@ -20,11 +21,11 @@ const Footer = () => {
                   alt="logo"
                 />
               </Link>
-              <ul className="col-12 col-md-4 col-lg-3 list-unstyled text-center oculto">
+              <ul className="col-12 col-md-4 col-lg-3 list-unstyled text-center oculto footerLinks">
                 <li className="mb-2">
                   <Link
                     to="/error404"
-                    className="fw-bold text-white"
+                    className="fw-bold"
                     style={{ textDecoration: "none" }}
                   >
                     Últimas Noticias
@@ -33,7 +34,7 @@ const Footer = () => {
                 <li className="mb-2">
                   <Link
                     to="/error404"
-                    className="fw-bold text-white"
+                    className="fw-bold"
                     style={{ textDecoration: "none" }}
                   >
                     Opinión
@@ -42,7 +43,7 @@ const Footer = () => {
                 <li className="mb-2">
                   <Link
                     to="/error404"
-                    className="fw-bold text-white"
+                    className="fw-bold"
                     style={{ textDecoration: "none" }}
                   >
                     Edición Impresa
@@ -78,7 +79,7 @@ const Footer = () => {
                   </Link>
                 </li>
               </ul>
-              <ul className="col-12 col-md-12 col-lg-3 list-unstyled">
+              <ul className="col-12 col-md-12 col-lg-3 list-unstyled social">
                 <li className="mb-2 fw-bold"></li>
                 <li className="d-flex justify-content-evenly">
                   <Link to="/error404" className="icono-footer text-center">
@@ -95,7 +96,6 @@ const Footer = () => {
                   <Link
                     to="/PaginaContacto"
                     className="text-white fw-bold"
-                    style={{ textDecoration: "none" }}
                   >
                     Contáctenos
                     </Link>
@@ -103,12 +103,12 @@ const Footer = () => {
               </ul>
             </nav>
           </div>
-        </footer>
-        <div className="text-center bg-footer">
-          <p className="text-white mb-0">
+          <div className="text-center bg-footer">
+          <span className="text-white py-4">
             &copy; BlogNews. Comision 9i-Grupo3. 2022
-          </p>
+          </span>
         </div>
+        </footer>
       </div>
     </>
   );
