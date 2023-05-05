@@ -20,7 +20,7 @@ const Articles = ({ Art }) => {
       <Card.Body className="CardBody">
         <Card.Text className="px-2 text-center">{title}</Card.Text>
       </Card.Body>
-      <div className="mt-auto btns">
+      <div className="mt-auto btns text-white">
         <Link className="btn" to={`/ArticleDetail/${id}`}>
           Ir al articulo
         </Link>

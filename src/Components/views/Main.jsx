@@ -12,7 +12,7 @@ const Main = ({ News}) => {
     <>
       <Header setSearchState={setSearchState}/>
       <Container>
-      <h1 className="display-3 py-3 text-center">Bienvenidos</h1>
+      <h1 className="display-3 py-3 text-center">Artículos destacados</h1>
       <hr />
       <div className="cards">
         {

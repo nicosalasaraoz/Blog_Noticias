@@ -3,12 +3,9 @@ import { Carousel, Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 import Desplegable from "./Desplegable";
-
 import { FaSistrix } from "react-icons/fa";
 
-
 const Header = (props) => {
-  console.log('props', props)
   return (
     <>
       <Navbar bg="dark" className="" sticky="top">
