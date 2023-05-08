@@ -19,13 +19,13 @@ const Search = ({News, searchState, setSearchState}) => {
 
   useEffect(() => {
     prueba();
-  }, [searchState]);
+   }, [searchState]);
 
   return (
     <>
       <Container>
         <div className="Buscador">
-          {articles.url?(articles.map((article) => (
+          {articles[0]?(articles.map((article) => (
             <div key={article.id} className="Card">
               <Card.Img variant="top" src={article.url} />
               <Card.Body>
