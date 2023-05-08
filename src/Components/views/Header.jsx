@@ -5,7 +5,7 @@ import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 import Desplegable from "./Desplegable";
 import { FaSistrix } from "react-icons/fa";
 
-const Header = (props) => {
+const Header = ({ setSearchState, searchState }) => {
   return (
     <>
       <Navbar bg="dark" className="" sticky="top">
@@ -21,48 +21,43 @@ const Header = (props) => {
               />
             </Navbar.Brand>
           </div>
-        
-        <div className="SearchBar"> 
-              <div className="ocultar-busqueda input-wrapper">
-                <input
-                  className="form-control"
-                  type="text"
-                  placeholder="Buscar articulo..."
-                  value={props.search}
-                  onChange={(e)=> props.setSearchState(e.target.value)}
-                />
-                </div>
-                <Link className="SearchIcon ocultar-busqueda">
-                <FaSistrix className="d-flex" />
-                </Link>
-        
-                </div>
 
-              <div className="d-flex ">
-                <ul className="SocialHeader">
-                  <li>
-                    <Link
-                      to="/error404"
-                      className=""
-                    >
-                      <FaFacebookF/>
-                    </Link>
-                    <Link
-                      to="/error404"
-                      className=""
-                    >
-                      <FaTwitter />
-                    </Link>
-                    <Link
-                      to="/error404"
-                      className=""
-                    >
-                      <FaInstagram />
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-          
+          <div className="SearchBar">
+            <div className="ocultar-busqueda input-wrapper">
+              <input
+                className="form-control"
+                type="text"
+                placeholder="Buscar articulo..."
+                value={searchState}
+                onChange={(e) => setSearchState(e.target.value)}
+              />
+            </div>
+            {searchState ? (
+              <Link to="/search" className="SearchIcon ocultar-busqueda">
+                <FaSistrix className="d-flex" />
+              </Link>
+            ) : (
+              <Link className="SearchIcon ocultar-busqueda">
+                <FaSistrix className="d-flex" />
+              </Link>
+            )}
+          </div>
+
+          <div className="d-flex ">
+            <ul className="SocialHeader">
+              <li>
+                <Link to="/error404" className="">
+                  <FaFacebookF />
+                </Link>
+                <Link to="/error404" className="">
+                  <FaTwitter />
+                </Link>
+                <Link to="/error404" className="">
+                  <FaInstagram />
+                </Link>
+              </li>
+            </ul>
+          </div>
         </Container>
       </Navbar>
       <Container>
@@ -112,7 +107,6 @@ const Header = (props) => {
           </Carousel>
         </div>
       </Container>
-      
     </>
   );
 };

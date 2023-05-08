@@ -396,3 +396,9 @@ winter:FDF0E0;
 .input-wrapper{
 width: 25rem;
 }
+
+.Buscador{
+  display: flex;
+  flex-wrap: wrap;
+  gap:2rem;
+}

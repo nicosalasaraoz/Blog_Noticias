@@ -6,11 +6,11 @@ import Articles from "./news/Articles";
 import Search from "./Search";
 
 
-const Main = ({ News}) => {
-  const [searchState, setSearchState] = useState('');
+const Main = ({ News, setSearchState, searchState}) => {
+  
   return (
     <>
-      <Header setSearchState={setSearchState}/>
+      <Header setSearchState={setSearchState} searchState={searchState}/>
       <Container>
       <h1 className="display-3 py-3 text-center">Artículos destacados</h1>
       <hr />
