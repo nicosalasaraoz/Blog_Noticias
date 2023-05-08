@@ -25,7 +25,7 @@ const Search = ({News, searchState, setSearchState}) => {
     <>
       <Container>
         <div className="Buscador">
-          {articles.map((article) => (
+          {articles.url?(articles.map((article) => (
             <div key={article.id} className="Card">
               <Card.Img variant="top" src={article.url} />
               <Card.Body>
@@ -33,8 +33,7 @@ const Search = ({News, searchState, setSearchState}) => {
                 <Card.Text>{article.description}</Card.Text>
                 <Button >leer más..</Button>
               </Card.Body>
-            </div>
-          ))}
+            </div>))):(<h1 className="buscadorMessage">No se encontraron resultados para : "{searchState}"</h1>)}
         </div>
       </Container>
     </>
