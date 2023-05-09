@@ -1,16 +1,8 @@
 @import url("/src/css-reset/reset.css");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
 
-
-
 .bg-navbar {
   background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(14, 14, 175, 1) 11%,
-    rgba(38, 40, 41, 1) 100%
-  );
 }
 
 @media only screen and (max-width: 768px) {
@@ -25,16 +17,15 @@
   }
 }
 
-.icon-tog {
-  display: flex !important;
-  justify-content: flex-end !important;
+.sec-nav{
+  font-size: 1rem;
 }
 
-.icono-fav {
-  color: gold;
-  font-size: 25px;
-  border-color: black;
+.icon-tog {
+  font-size: 1rem;
 }
+
+
 
 .input-wrapper {
   position: relative;
@@ -42,15 +33,35 @@
 }
 
 
-
-
-.icono-login {
-  font-size: 25px;
-}
-
 .icono-call {
   color: rgb(255, 255, 255);
   font-size: 25px;
+  padding: 1rem 0;
+}
+
+.icono-call a{
+  position: relative;
+}
+
+.icono-call a::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: blue;
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+.icono-call a:hover{
+  color: #fff;
+}
+.icono-call a:hover::after{
+  transform-origin: left;
+  transform: scaleX(1);
 }
 
 .icono-home {
@@ -63,9 +74,8 @@
   font-size: 25px;
 }
 
-@media only screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .ocultar-buscador {
-    visibility: hidden;
     display: none;
   }
 }
@@ -101,14 +111,14 @@ winter:FDF0E0;
 .bg-footer {
   background-color: rgb(69, 68, 68);
 }
-.footerLinks li a{
+.footerLinks li a {
   list-style-type: none;
   text-decoration: none;
   color: white;
 }
 
-.footerLinks li a:hover{
-  color: #0008C1;
+.footerLinks li a:hover {
+  color: #0008c1;
 }
 
 @media only screen and (max-width: 760px) {
@@ -118,12 +128,12 @@ winter:FDF0E0;
   }
 }
 
-.social a{
+.social a {
   text-decoration: none;
   list-style-type: none;
 }
 
-.social a:hover{
+.social a:hover {
   color: #fff;
 }
 .icono-footer {
@@ -132,8 +142,8 @@ winter:FDF0E0;
   font-size: 20px;
   color: #fff;
   position: relative;
-  transition: scale 100ms ease-in-out; 
-  background: linear-gradient(180deg, #2146C7, #0008C1);
+  transition: scale 100ms ease-in-out;
+  background: linear-gradient(180deg, #2146c7, #0008c1);
   border-radius: 50%;
   z-index: 1;
 }
@@ -151,7 +161,7 @@ winter:FDF0E0;
   }
 }
 
-.icono-footer::after{
+.icono-footer::after {
   content: "";
   position: absolute;
   top: 0;
@@ -164,22 +174,22 @@ winter:FDF0E0;
   opacity: 0;
   scale: 0.95;
   pointer-events: none;
-  transition:scale 1s ease;
+  transition: scale 1s ease;
 }
 
-.icono-footer:hover::after{
+.icono-footer:hover::after {
   animation: pulse 1s;
-  transition:scale 1s ease;
+  transition: scale 1s ease;
 }
 
-.btn{
-  background:linear-gradient(180deg, #2146C7, #0008C1);
+.btn {
+  background: linear-gradient(180deg, #2146c7, #0008c1);
   width: 7rem;
   height: 2.5rem;
   position: relative;
 }
 
-.btn::after{
+.btn::after {
   content: "";
   position: absolute;
   top: 0;
@@ -188,39 +198,38 @@ winter:FDF0E0;
   width: 100%;
   height: 100%;
   background: inherit;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   opacity: 0;
   scale: 0.95;
   pointer-events: none;
-  transition:scale 1s ease;
- 
+  transition: scale 1s ease;
 }
 
-.btn:hover::after{
+.btn:hover::after {
   animation: pulse 1s;
-  transition:scale 1s ease;
+  transition: scale 1s ease;
 }
-.btns{
+.btns {
   display: flex;
   width: 100%;
   justify-content: space-between;
 }
 
-.like{
+.like {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 3rem;
 }
 
-.cards{
+.cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap:2rem;
+  gap: 2rem;
 }
 
-.Card{
+.Card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -231,19 +240,18 @@ winter:FDF0E0;
   border-radius: 1rem;
 }
 
-.Card:hover{
-  border: 2px solid #0008C1;
+.Card:hover {
+  border: 2px solid #0008c1;
 }
 
-
-.card >img{
+.card > img {
   width: 100%;
   padding: 0;
 }
 
-.CardBody{
+.CardBody {
   margin: 2rem 0;
-  padding:1rem;
+  padding: 1rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -256,7 +264,7 @@ winter:FDF0E0;
 .bt-volver {
   position: relative;
   top: 90%;
-  
+
   align-items: center;
   text-align: center;
   cursor: pointer;
@@ -326,8 +334,7 @@ winter:FDF0E0;
   max-height: 600px;
 }
 
-
-.SocialHeader{
+.SocialHeader {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -336,12 +343,12 @@ winter:FDF0E0;
 }
 
 .SocialHeader li {
-  padding: .5rem;
+  padding: 0.5rem;
   display: flex;
-  gap:1rem;
+  gap: 1rem;
 }
 
-.SocialHeader li a{
+.SocialHeader li a {
   border-radius: 50%;
   display: flex;
   position: relative;
@@ -351,7 +358,7 @@ winter:FDF0E0;
   color: #fff;
 }
 
-.SocialHeader a::after{
+.SocialHeader a::after {
   content: "";
   position: absolute;
   top: 0;
@@ -364,35 +371,80 @@ winter:FDF0E0;
   opacity: 0;
   scale: 0.95;
   pointer-events: none;
-  transition:scale 1s ease;
-  background: linear-gradient(180deg, #2146C7, #0008C1);
+  transition: scale 1s ease;
+  background: linear-gradient(180deg, #2146c7, #0008c1);
 }
 
-.SocialHeader a:hover::after{
+.SocialHeader a:hover::after {
   animation: pulse 1s;
-  transition:scale 1s ease;
+  transition: scale 1s ease;
 }
 
-
-.SearchBar{
+.SearchBar {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.SearchIcon{
-  padding: .5rem;
+.SearchIcon {
+  padding: 0.5rem;
   border: 2px solid #151515;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   text-decoration: none;
-  list-style-type:none;
+  list-style-type: none;
   color: #fff;
 }
 
-.SearchIcon:hover{
+.SearchIcon:hover {
   color: #fff;
 }
 
-.input-wrapper{
-width: 25rem;
+.input-wrapper {
+  width: 25rem;
+}
+
+.Buscador {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.buscadorMessage {
+  margin: auto;
+  padding: 2rem;
+}
+
+.navIcons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  margin:0 1rem;
+}
+
+
+
+.textNav{
+  margin-left: .5rem;
+  font-size: 1rem;
+}
+
+.navIconsContainer{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.navBarMobile{
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width:750px){
+  .navBarMobile{
+    display: flex;
+    flex-direction: column;
+  }
 }

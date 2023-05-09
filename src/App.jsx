@@ -13,22 +13,25 @@ import ArticleDetail from "./Components/views/news/ArticleDetail";
 import Administrador from "./Components/views/admin/Administrador";
 import CrearNews from "./Components/views/admin/CrearNews";
 import EditarNews from "./Components/views/admin/EditarNews";
+import { useState } from "react";
 
 function App() {
+  
+  const [searchState, setSearchState] = useState('');
   
   return (
 <BrowserRouter>
       <Container fluid className="d-flex flex-column min-vh-100 px-0">
         <NavbarMain />
           <Routes>
-            <Route exact path="/" element={<Main News={News} />} />
+            <Route exact path="/" element={<Main News={News} searchState={searchState} setSearchState={setSearchState } />} />
             <Route exact path="/PaginaContacto" element={<PaginaContacto />} />
             <Route path="*" element={<Error404 />} />
             <Route path="/ArticleDetail/:id"  element={<ArticleDetail/>} />
             <Route exact path="/Administrar" element={<Administrador News={News} />} />
             <Route exact path="/Administrar/crear" element={<CrearNews />} />
             <Route exact path="/Administrar/editar/:id" element={<EditarNews />} />
-            {/* <Route exact path="/search" element={<Search />} /> */}
+            <Route exact path="/search" element={<Search News={News} searchState={searchState} setSearchState={setSearchState} />} />
             {/* <Route path="/search=:resultado" element={<Search Artdb={Artdb} />} />*/}
             {/* <Route path="/Administrar/*"
                     element={

@@ -1,51 +1,40 @@
 import React, { useState, useEffect } from "react";
 import { Button, Card, Container, Row } from "react-bootstrap";
 
-const Search = (props) => {
-  console.log("props", props)
+const Search = ({News, searchState, setSearchState}) => {
+
   const [articles, setArticles] = useState([]);
-  const [search, setSearch] = useState('');
-  console.log('searchProps', search)
 
   // Cambiar URL por na de Noticias desde base de datos
   const URL = "https://fakestoreapi.com/products";
 
-  const showData = async () => {
-    const response = await fetch(URL);
-    const data = await response.json();
-    setArticles(data);
-  };
 
   const prueba = () =>{
-    let res = articles.filter((dato) => dato.title.toLowerCase().includes(props.searchState.toLowerCase()));
-    setArticles(res)
+    let res = News.filter((dato) => dato.title.toLowerCase().includes(searchState.toLowerCase()));
+    setArticles(res);
   } 
-  console.log('articles', articles)
+ 
 
 
-  useEffect(() => {
-    showData();
-  }, []);
 
   useEffect(() => {
-    prueba()
-  }, [props.searchState]);
+    prueba();
+   }, [searchState]);
 
   return (
     <>
       <Container>
-        <Row xs={1} md={2} className="g-4">
-          {articles.map((article) => (
-            <Card key={article.id} style={{ width: "10rem" }}>
-              <Card.Img variant="top" src={article.image} />
+        <div className="Buscador">
+          {articles[0]?(articles.map((article) => (
+            <div key={article.id} className="Card">
+              <Card.Img variant="top" src={article.url} />
               <Card.Body>
                 <Card.Title>{article.title}</Card.Title>
                 <Card.Text>{article.description}</Card.Text>
-                <Button variant="primary">leer más..</Button>
+                <Button >leer más..</Button>
               </Card.Body>
-            </Card>
-          ))}
-        </Row>
+            </div>))):(<h1 className="buscadorMessage">No se encontraron resultados para : "{searchState}"</h1>)}
+        </div>
       </Container>
     </>
   );

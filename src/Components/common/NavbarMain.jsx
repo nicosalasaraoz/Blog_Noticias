@@ -22,29 +22,24 @@ const NavbarMain = () => {
             aria-controls="basic-navbar-nav"
             className="bg-light"
           />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav>
-              <div className="d-flex justify-content-center">
-                  <div className="icono-call text-dark mb-1 mx-2">
-                    <Link
-                      to="/PaginaContacto"
-                      className="text-white"
-                      style={{ textDecoration: "none" }}>
-                      <ion-icon name="call"></ion-icon>
-                    </Link>
-                  </div>
-                  <div className="icono-home  text-dark mb-1 mx-2">
-                    <Link
-                      to="/"
-                      className="text-white"
-                      style={{ textDecoration: "none" }}>
-                      <ion-icon name="home"></ion-icon>
-                    </Link>
-                  </div>
+          <Navbar.Collapse id="basic-navbar-nav" className="navBarMobile">
+             <div className="d-flex justify-content-center">
+                <div className="icono-call text-dark mb-1 mx-2">
+                  <Link to="/" className="navIcons">
+                    <ion-icon name="home"></ion-icon>
+                    <span className="textNav">Inicio</span>
+                  </Link>
+                </div>
+                <div className="icono-call  text-dark mb-1 mx-2">
+                  <Link to="/PaginaContacto" className="navIcons">
+                    <ion-icon name="call"></ion-icon>
+                    <span className="textNav">Contacto</span>
+                  </Link>
+                </div>
               </div>
-            </Nav>
-            <Container>
-              <Form className="d-flex justify-content-center no-wrap ocultar-buscador">
+           
+           
+              <Form className="ocultar-buscador">
                 <Form.Control
                   type="search"
                   placeholder="Buscar..."
@@ -55,43 +50,25 @@ const NavbarMain = () => {
                   // onChange={(e) => setSearch(e.target.value)}
                 />
                 {/* <Link to={`/search=${search}`}> */}
-                  {/* <FontAwesomeIcon icon={faMagnifyingGlass} /> */}
+                {/* <FontAwesomeIcon icon={faMagnifyingGlass} /> */}
                 {/* </Link> */}
               </Form>
-            </Container>
-            <Nav>
-              <Button
-                variant="outline-secondary"
-                className="d-flex align-items-center justify-content-center mx-1 mb-2 btn-nav"
-                size="sm"
-              >
-                <div className="icono-fav">
-                  <ion-icon name="star"></ion-icon>
-                </div>
-                <p className="m-1">
-                  <b>Favoritos</b>
-                </p>
-              </Button>
-              <Button
-                className="d-flex align-items-center justify-content-center mx-1 mb-2 btn-nav"
-                onClick={handleShow}
-              >
-                <div className="icono-login">
-                  <ion-icon name="log-in-outline"></ion-icon>
-                </div>
-                <p className="m-1">
-                  <b>Login</b>
-                </p>
-              </Button>
-              <Button
-                variant="primary"
-                className="d-flex align-items-center justify-content-center mx-1 mb-2 btn-nav"
-                onClick={handleMostrar}
-              >
-                <p className="m-1">
-                  <b>Registrarse</b>
-                </p>
-              </Button>
+           
+            <Nav className="icono-call">
+              <div className="navIconsContainer">
+                <Link className="navIcons">
+                  <ion-icon name="star" className=""></ion-icon>
+                  <span className="textNav">Favoritos</span>
+                </Link>
+                <Link className="navIcons" onClick={handleShow}>
+                  <ion-icon name="log-in-outline" size={5}></ion-icon>
+                  <span className="textNav">Login</span>
+                </Link>
+                <Link className="navIcons" onClick={handleMostrar}>
+                  <ion-icon name="calendar"></ion-icon>
+                  <span className="textNav">Registrarse</span>
+                </Link>
+              </div>
               <div className="sec-nav">
                 <hr className="text-white" />
                 <h3 className="text-white fs-5">SECCIONES</h3>
@@ -114,13 +91,9 @@ const NavbarMain = () => {
                   <Nav.Link className="text-white" eventKey="link-7">
                     Opinión
                   </Nav.Link>
-                  <a
-                    href="https://www.lavoz.com.ar/temas/exclusivo/"
-                    className="fw-bold fs-6 text-white"
-                    style={{ textDecoration: "none" }}
-                  >
-                    Contenido Exclusivo
-                  </a>
+                  <Nav.Link href="https://www.lavoz.com.ar/temas/exclusivo/" className="text-white" eventKey="link-8">
+                  Contenido Exclusivo
+                  </Nav.Link>
                 </div>
               </div>
             </Nav>
