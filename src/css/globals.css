@@ -3,12 +3,6 @@
 
 .bg-navbar {
   background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(14, 14, 175, 1) 11%,
-    rgba(38, 40, 41, 1) 100%
-  );
 }
 
 @media only screen and (max-width: 768px) {
@@ -23,29 +17,51 @@
   }
 }
 
-.icon-tog {
-  display: flex !important;
-  justify-content: flex-end !important;
+.sec-nav{
+  font-size: 1rem;
 }
 
-.icono-fav {
-  color: gold;
-  font-size: 25px;
-  border-color: black;
+.icon-tog {
+  font-size: 1rem;
 }
+
+
 
 .input-wrapper {
   position: relative;
   width: 230px;
 }
 
-.icono-login {
-  font-size: 25px;
-}
 
 .icono-call {
   color: rgb(255, 255, 255);
   font-size: 25px;
+  padding: 1rem 0;
+}
+
+.icono-call a{
+  position: relative;
+}
+
+.icono-call a::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: blue;
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+.icono-call a:hover{
+  color: #fff;
+}
+.icono-call a:hover::after{
+  transform-origin: left;
+  transform: scaleX(1);
 }
 
 .icono-home {
@@ -58,9 +74,8 @@
   font-size: 25px;
 }
 
-@media only screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .ocultar-buscador {
-    visibility: hidden;
     display: none;
   }
 }
@@ -397,4 +412,39 @@ winter:FDF0E0;
 .buscadorMessage {
   margin: auto;
   padding: 2rem;
+}
+
+.navIcons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  margin:0 1rem;
+}
+
+
+
+.textNav{
+  margin-left: .5rem;
+  font-size: 1rem;
+}
+
+.navIconsContainer{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.navBarMobile{
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width:750px){
+  .navBarMobile{
+    display: flex;
+    flex-direction: column;
+  }
 }
