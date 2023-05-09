@@ -22,7 +22,7 @@ function App() {
   return (
 <BrowserRouter>
       <Container fluid className="d-flex flex-column min-vh-100 px-0">
-        <NavbarMain />
+        <NavbarMain News={News} searchState={searchState} setSearchState={setSearchState} />
           <Routes>
             <Route exact path="/" element={<Main News={News} searchState={searchState} setSearchState={setSearchState } />} />
             <Route exact path="/PaginaContacto" element={<PaginaContacto />} />
