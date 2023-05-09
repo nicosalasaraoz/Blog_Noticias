@@ -3,10 +3,10 @@ import { Button, Container, Form, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import ModalLogin from "../views/ModalLogin";
 import ModalRegistro from "../views/ModalRegistro";
+import { FaSistrix } from "react-icons/fa";
 
-const NavbarMain = () => {
+const NavbarMain = ({ News, searchState, setSearchState }) => {
   const [show, setShow] = useState(false);
-  const [search, setSearch] = useState("");
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
@@ -23,37 +23,40 @@ const NavbarMain = () => {
             className="bg-light"
           />
           <Navbar.Collapse id="basic-navbar-nav" className="navBarMobile">
-             <div className="d-flex justify-content-center">
-                <div className="icono-call text-dark mb-1 mx-2">
-                  <Link to="/" className="navIcons">
-                    <ion-icon name="home"></ion-icon>
-                    <span className="textNav">Inicio</span>
-                  </Link>
-                </div>
-                <div className="icono-call  text-dark mb-1 mx-2">
-                  <Link to="/PaginaContacto" className="navIcons">
-                    <ion-icon name="call"></ion-icon>
-                    <span className="textNav">Contacto</span>
-                  </Link>
-                </div>
+            <div className="d-flex justify-content-center">
+              <div className="icono-call text-dark mb-1 mx-2">
+                <Link to="/" className="navIcons">
+                  <ion-icon name="home"></ion-icon>
+                  <span className="textNav">Inicio</span>
+                </Link>
               </div>
-           
-           
-              <Form className="ocultar-buscador">
-                <Form.Control
-                  type="search"
-                  placeholder="Buscar..."
-                  className="me-2 mb-2"
-                  aria-label="Search"
-                  size="sm"
-                  // value={search}
-                  // onChange={(e) => setSearch(e.target.value)}
-                />
-                {/* <Link to={`/search=${search}`}> */}
-                {/* <FontAwesomeIcon icon={faMagnifyingGlass} /> */}
-                {/* </Link> */}
-              </Form>
-           
+              <div className="icono-call  text-dark mb-1 mx-2">
+                <Link to="/PaginaContacto" className="navIcons">
+                  <ion-icon name="call"></ion-icon>
+                  <span className="textNav">Contacto</span>
+                </Link>
+              </div>
+            </div>
+            <Form className="ocultar-buscador">
+              <Form.Control
+                type="search"
+                placeholder="Buscar..."
+                className="me-2 "
+                aria-label="Search"
+                size="sm"
+                value={searchState}
+                onChange={(e) => setSearchState(e.target.value)}
+              />
+              {searchState ? (
+                <Link to="/search" className="SearchIconMobile">
+                  <FaSistrix className="d-flex" />
+                </Link>
+              ) : (
+                <Link className="SearchIconMobile">
+                  <FaSistrix className="d-flex" />
+                </Link>
+              )}
+            </Form>
             <Nav className="icono-call">
               <div className="navIconsContainer">
                 <Link className="navIcons">
@@ -91,8 +94,12 @@ const NavbarMain = () => {
                   <Nav.Link className="text-white" eventKey="link-7">
                     Opinión
                   </Nav.Link>
-                  <Nav.Link href="https://www.lavoz.com.ar/temas/exclusivo/" className="text-white" eventKey="link-8">
-                  Contenido Exclusivo
+                  <Nav.Link
+                    href="https://www.lavoz.com.ar/temas/exclusivo/"
+                    className="text-white"
+                    eventKey="link-8"
+                  >
+                    Contenido Exclusivo
                   </Nav.Link>
                 </div>
               </div>

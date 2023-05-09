@@ -74,10 +74,32 @@
   font-size: 25px;
 }
 
+
+
+.ocultar-buscador{
+display: flex;
+width: 100%;
+}
+
 @media (min-width: 768px) {
   .ocultar-buscador {
     display: none;
   }
+  .SearchIconMobile{
+    display: none;
+  }
+}
+
+.SearchIconMobile{
+  border: 2px solid #151515;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  list-style-type: none;
+  color: #fff;
+  padding: .5rem;
+}
+.SearchIconMobile:hover{
+  color: #fff;
 }
 
 .color-formc {
