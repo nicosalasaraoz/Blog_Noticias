@@ -1,9 +1,8 @@
 import React from "react";
-import { useState } from "react";
 import { Container, Row} from 'react-bootstrap';
 import Header from "./Header";  
 import Articles from "./news/Articles";
-import Search from "./Search";
+
 
 
 const Main = ({ News, setSearchState, searchState}) => {
